@@ -18,7 +18,14 @@ use App\Http\Controllers\Registration_Employee_Controller;
 Route::get('/', function () {
     return view('welcome');
 });
-
+//Create Schedule
+Route::get('/patient/schedule', function(){
+    return view('Schedule');
+});
+//AppointmentCreate
+Route::get('/create/appointment', function(){
+    return view('AppointmentCreate');
+});
 //Employee Model Routes
 Route::get('/employees', [Employee_Controller::class, 'employees']);
 
