@@ -20,15 +20,15 @@ class Employee_Controller extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'first_name'=>'required',
-            'last_name'=>'required',
-            'role'=>'required',
-            'email'=>'required',
-            'phone'=>'required',
-            'password'=>'required',
-            'dob'=>'required',
-        ]);
+        // $request->validate([
+        //     'first_name'=>'required',
+        //     'last_name'=>'required',
+        //     'role'=>'required',
+        //     'email'=>'required',
+        //     'phone'=>'required',
+        //     'password'=>'required',
+        //     'dob'=>'required'
+        // ]);
         return Employee::create($request->all());
     }
 

@@ -8,7 +8,7 @@
 </head>
 <body>
     
-<form action={{ url('/api/employees') }} method="POST">
+<form action={{ url('') }} method="POST">
     @csrf
     <label for="">First Name</label>
     <input type="text" name="first_name">
@@ -30,6 +30,13 @@
     <br>
     <label for="">dob</label>
     <input type="text" name="dob">
+    <br>
+    <label for="">Emergency Contact</label>
+    <input type="text" name="emergency_contact">
+    <br>
+    <label for="">Emergency Contact Relationship</label>
+    <input type="text" name="emergency_contact_relationship">
+    <br>
     <input type="submit">
     <br>
 
