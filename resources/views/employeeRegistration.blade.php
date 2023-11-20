@@ -28,7 +28,7 @@
 <label for="">Password</label>
 <input type="text" name="password">
 <br>
-<label for="">dob</label>
+<label for="">Date Of Birth</label>
 <input type="text" name="dob">
 <input type="submit">
 <br>
