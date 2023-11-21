@@ -23,13 +23,13 @@
     <input type="text" name="email">
     <br>
     <label for="">Phone</label>
-    <input type="text" name="phone_number">
+    <input type="text" name="phone">
     <br>
     <label for="">Password</label>
     <input type="text" name="password">
     <br>
     <label for="">dob</label>
-    <input type="text" name="dob">
+    <input type="date" name="dob">
     <input type="submit">
     <br>
 
