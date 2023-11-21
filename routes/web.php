@@ -19,8 +19,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Employee Model Routes
-Route::get('/employees', [Employee_Controller::class, 'employees']);
+Route::get('/employees/registration', function(){
+    return view('employeeRegistration');
+});
 
-//Registration Employee Model Routes
-Route::get('/unapproved_employees', [Registration_Employee_Controller::class, 'unapproved_employees']);
+Route::get('/patients/registration', function(){
+    return view('patientRegistration');
+});
