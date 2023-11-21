@@ -10,6 +10,7 @@
     
 <form action={{ url('/api/employees') }} method="POST">
     @csrf
+
     <label for="">First Name</label>
     <input type="text" name="first_name">
     <br>

@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Employee_Controller;
 use App\Http\Controllers\Registration_Employee_Controller;
+use App\Http\Controllers\Role_Controller;
+use App\Http\Controllers\Roster_Controller;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,6 +19,15 @@ use App\Http\Controllers\Registration_Employee_Controller;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+
+Route::get('/roles', function () {
+    return view('roles');
+});
+
+Route::get('/roster', function () {
+    return view('roster');
 });
 
 //Create Schedule
