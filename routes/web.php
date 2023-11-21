@@ -21,6 +21,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::get('/roles', function () {
     return view('roles');
 });
@@ -29,17 +30,21 @@ Route::get('/roster', function () {
     return view('roster');
 });
 
-//Employee Model Routes
-Route::get('/employees', [Employee_Controller::class, 'employees']);
-
-//Registration Employee Model Routes
-Route::get('/unapproved_employees', [Registration_Employee_Controller::class, 'unapproved_employees']);
-
-
-Route::get('/roles', function () {
-    return view('roles');
+//Create Schedule
+Route::get('/patient/schedule', function(){
+    return view('Schedule');
+});
+//AppointmentCreate
+Route::get('/create/appointment', function(){
+    return view('AppointmentCreate');
 });
 
-Route::get('/roles', function () {
-    return view('roles');
+
+Route::get('/employees/registration', function(){
+    return view('employeeRegistration');
+});
+
+
+Route::get('/patients/registration', function(){
+    return view('patientRegistration');
 });

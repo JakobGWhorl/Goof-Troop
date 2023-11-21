@@ -8,7 +8,13 @@
 </head>
 <body>
     <form action='' method="GET">
-        @csrf
+    @csrf
+        <label for="Doctor">Doctor</label>
+        {{-- @foreach ($doctor as $row)
+            <option value="{{$row->Doctor}}"></option>
+        @endforeach --}}
+        <label for="comment">Comment</label>
+        <input type="text">
         <label for="Morning_med">Morning Medication</label>
         <input type="checkbox" id="Morning_med">
         <label for="Afternoon_med">Afternoon Medication</label>
@@ -16,13 +22,8 @@
         <label for="Night_med">Night Medication</label>
         <input type="checkbox" id="Night_med">
         <label for="Date">Date</label>
-        <input type="text">
-        <label for="Breakfast">Breakfast</label>
-        <input type="checkbox" id="Breakfast">
-        <label for="Lunch">Lunch</label>
-        <input type="checkbox" id="Lunch">
-        <label for="Dinner">Lunch</label>
-        <input type="checkbox" id="Dinner">
+        <input type="date">
+
     </form>
 </body>
 </html>
