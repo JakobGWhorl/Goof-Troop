@@ -18,6 +18,7 @@ use App\Http\Controllers\Registration_Employee_Controller;
 Route::get('/', function () {
     return view('welcome');
 });
+
 //Create Schedule
 Route::get('/patient/schedule', function(){
     return view('Schedule');
@@ -26,8 +27,13 @@ Route::get('/patient/schedule', function(){
 Route::get('/create/appointment', function(){
     return view('AppointmentCreate');
 });
-//Employee Model Routes
-Route::get('/employees', [Employee_Controller::class, 'employees']);
 
-//Registration Employee Model Routes
-Route::get('/unapproved_employees', [Registration_Employee_Controller::class, 'unapproved_employees']);
+
+Route::get('/employees/registration', function(){
+    return view('employeeRegistration');
+});
+
+
+Route::get('/patients/registration', function(){
+    return view('patientRegistration');
+});
