@@ -19,9 +19,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//Create Schedule
+Route::get('/patient/schedule', function(){
+    return view('Schedule');
+});
+//AppointmentCreate
+Route::get('/create/appointment', function(){
+    return view('AppointmentCreate');
+});
+
+
 Route::get('/employees/registration', function(){
     return view('employeeRegistration');
 });
+
 
 Route::get('/patients/registration', function(){
     return view('patientRegistration');
