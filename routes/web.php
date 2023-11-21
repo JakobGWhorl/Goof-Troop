@@ -26,9 +26,7 @@ Route::get('/roles', function () {
     return view('roles');
 });
 
-Route::get('/roster', function () {
-    return view('roster');
-});
+
 
 //Create Schedule
 Route::get('/patient/schedule', function(){
@@ -47,4 +45,12 @@ Route::get('/employees/registration', function(){
 
 Route::get('/patients/registration', function(){
     return view('patientRegistration');
+});
+
+Route::get('/create/roster', function(){
+    return view('roster');
+});
+
+Route::get('/create/roles', function(){
+    return view('roles');
 });

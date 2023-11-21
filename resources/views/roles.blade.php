@@ -8,13 +8,13 @@
 </head>
 <body>
     
-<form action={{ url('') }} method="POST">
+<form action={{ url('/api/roles') }} method="POST">
     @csrf
 <label for="">Role</label>
 <input type="text" name="role">
 <br>
 <label for="">Access Level</label>
-<input type="intager" name="access_level">
+<input type="number" name="access_level">
 <br>
 <input type="submit">
 <br>

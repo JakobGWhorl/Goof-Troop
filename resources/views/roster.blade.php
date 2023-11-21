@@ -8,25 +8,38 @@
 </head>
 <body>
     
-<form action={{ url('') }} method="POST">
+<form action={{ url('/api/rosters') }} method="POST">
     @csrf
 <label for="">Date</label>
-<input type="timestamp" name="date">
+<input type="date" name="date">
+<br>
+<label for="">Supervisor</label>
+<input type="text" name="supervisor">
 <br>
 <label for="">Doctor</label>
-<select name="doctor"></select>
+<select name="doctor">
+    <option value="doctor1">Doctor 1</option>
+</select>
 <br>
 <label for="">CareGiver 1</label>
-<select name="caregiver1"></select>
+<select name="caregiver1">
+    <option value="caregiver1">caregiver1</option>
+</select>
 <br>
 <label for="">CareGiver 2</label>
-<select name="caregiver2"></select>
+<select name="caregiver2">
+    <option value="caregiver2">caregiver2</option>
+</select>
 <br>
 <label for="">CareGiver 3</label>
-<select name="caregiver3"></select>
+<select name="caregiver3">
+    <option value="caregiver3">caregiver3</option>
+</select>
 <br>
 <label for="">CareGiver 4</label>
-<select name="caregiver4"></select>
+<select name="caregiver4">
+    <option value="caregiver4">caregiver4</option>
+</select>
 <input type="submit">
 <br>
 
