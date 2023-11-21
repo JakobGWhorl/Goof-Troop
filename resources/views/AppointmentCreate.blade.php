@@ -22,7 +22,7 @@
         <label for="Night_med">Night Medication</label>
         <input type="checkbox" id="Night_med">
         <label for="Date">Date</label>
-        <input type="text">
+        <input type="date">
 
     </form>
 </body>
