@@ -17,9 +17,10 @@ body {
 .form>div {
     color: black;
     border-radius: 5%;
-    max-width: 25%;
+    max-width: 90%;
     background-color: #B9FAF8;
     padding: 1em;
+    margin: 1em;
 }
 .form-input {
     display:flex;
