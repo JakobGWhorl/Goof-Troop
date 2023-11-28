@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Employee_Controller;
+use App\Http\Controllers\Patient_Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,3 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::resource('employees', Employee_Controller::class);
+Route::resource('patients', Patient_Controller::class);
