@@ -1,0 +1,37 @@
+body {
+    background-color: #B298DC;
+}
+
+.form {    
+    display: flex;
+    justify-content: center;    
+}
+.form>div>h1, .form>div>input {
+    text-align: center;
+    width: 100%;
+    margin:auto;
+}
+.form>div>input {
+    background-color: #B8D0EB;
+}
+.form>div {
+    color: black;
+    border-radius: 5%;
+    max-width: 90%;
+    background-color: #B9FAF8;
+    padding: 1em;
+    margin: 1em;
+}
+.form-input {
+    display:flex;
+    justify-content: left;
+    margin: .5em;
+}
+.form-input>label{
+    width: 8em;
+    text-align: right;
+    margin-right: 1em;
+}
+.form-input>input{
+    width: 11em;
+}
