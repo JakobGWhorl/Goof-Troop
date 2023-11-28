@@ -7,14 +7,14 @@
     <title>Roles</title>
 </head>
 <body>
-    
+
 <form action={{ url('') }} method="POST">
     @csrf
 <label for="">Role</label>
 <input type="text" name="role">
 <br>
 <label for="">Access Level</label>
-<input type="intager" name="access_level">
+<input type="integer" name="access_level">
 <br>
 <input type="submit">
 <br>
