@@ -40,11 +40,14 @@ Route::get('/create/appointment', function(){
 });
 
 
-Route::get('/employees/registration', function(){
-    return view('employeeRegistration');
+
+//registration routes
+Route::get('/registration', function(){
+    return view('registration');
+});
+Route::get('/login', function(){
+    return view('login');
 });
 
 
-Route::get('/patients/registration', function(){
-    return view('patientRegistration');
-});
+
