@@ -18,7 +18,7 @@ use App\Http\Controllers\Roster_Controller;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('HomePage');
 });
 
 
