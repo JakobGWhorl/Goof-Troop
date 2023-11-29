@@ -54,3 +54,10 @@ Inside your form your layout should look like this
 .form-input>input{
     width: 11em;
 }
+.error {
+    text-align: center;
+    color: #FF0035;
+    font-weight: bold;
+    margin-top: 1em;
+}
+

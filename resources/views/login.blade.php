@@ -9,7 +9,8 @@
     <link rel="stylesheet" href={{ URL::asset('css/app.css'); }}>    
 </head>
 <body>
-    <form class='form'>
+    <form class='form' method="POST" action="{{ url('/login') }}">
+        @csrf
         <div>
             <h1>Login</h1>
             <div class='form-input'>
@@ -21,6 +22,17 @@
                 <input type="password" name="password" id="password_field">
                 <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
             </div>
+            <input type="submit" value="Submit">
+           
+            <div class='error'>
+                @isset($error)
+                    {{ $error }}
+                @endisset
+            </div>
+                
+            
+                
+            
         </div>
     </form>
 </body>
