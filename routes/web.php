@@ -7,6 +7,7 @@ use App\Http\Controllers\Registration_Employee_Controller;
 use App\Http\Controllers\Role_Controller;
 use App\Http\Controllers\Roster_Controller;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -61,5 +62,31 @@ Route::get('/login', function(){
     return view('login');
 });
 
+Route::post('/login', function(Request $r){
+    $account = null;
+    //get email from request
+    $email = $r->all('email');
+    
+    //search for email
+    if(DB::table('patients')->select('email')->where('email','=',$email)->get() == '[]' || DB::table('employees')->select('email')->where('email','=',$email)->get() == '[]'){
+        return view('login',['error'=>'No Account with such email!']);
+    }
+    elseif(DB::table('patients')->select('email')->where('email','=',$email)->get() == '[]'){
+        $account = DB::table('employees')->select('email','password')->where('email','=',$email)->get()[0];
+    }
+    else{
+        $account = DB::table('patients')->select('email','password')->where('email','=',$email)->get()[0];
+    }
 
+    
+    
+    //get password from request
+    $password = $r->all('password')['password'];
+  
+    //passwords match?
+    if($password == $account->password)
+        return "Successful Login!";
+    else
+        return view('login',['error'=>'Incorrect Password!']);
+});
 
