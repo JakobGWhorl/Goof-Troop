@@ -20,7 +20,7 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('HomePage');
 });
 
 
@@ -28,9 +28,10 @@ Route::get('/roles', function () {
     return view('roles');
 });
 
-Route::get('/roster', function () {
-    return view('roster');
+Route::get('/create/roles', function(){
+    return view('roles');
 });
+
 
 //Create Schedule
 Route::get('/patient/schedule', function(){
@@ -76,9 +77,7 @@ Route::post('/login', function(Request $r){
     }
     else{
         $account = DB::table('patients')->select('email','password')->where('email','=',$email)->get()[0];
-    }
-
-    
+    } 
     
     //get password from request
     $password = $r->all('password')['password'];

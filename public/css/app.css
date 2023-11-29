@@ -1,11 +1,30 @@
+/*
+Effects the entire page
+RN only changes background color
+*/
 body {
     background-color: #B298DC;
 }
-
+/*Gets applied to your form tag  */
 .form {    
     display: flex;
     justify-content: center;    
 }
+/* 
+Inside your form your layout should look like this
+
+    <form class="form">
+        <div>
+            <h1>Some text</h1>
+            <div class = "form-input">
+                <label>
+                <input>
+            </div>
+            <input type='submit'
+        </div>
+    </form>
+
+*/
 .form>div>h1, .form>div>input {
     text-align: center;
     width: 100%;
@@ -41,3 +60,4 @@ body {
     font-weight: bold;
     margin-top: 1em;
 }
+

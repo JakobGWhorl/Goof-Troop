@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Roster;
+use App\Models\Appointment;
 
-class Roster_Controller extends Controller
+class Appointment_ApiController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -21,16 +21,7 @@ class Roster_Controller extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'date'=>'required',
-            'supervisor'=>'required',
-            'doctor'=>'required',
-            'caregiver1'=>'required',
-            'caregiver2'=>'required',
-            'caregiver3'=>'required',
-            'caregiver4'=>'required'
-        ]);
-        return Roster::create($request->all());
+        
     }
 
     /**
