@@ -8,17 +8,21 @@
 </head>
 <body>
     
-<form action={{ url('') }} method="POST">
-    @csrf
-<label for="">Role</label>
-<input type="text" name="role">
-<br>
-<label for="">Access Level</label>
-<input type="intager" name="access_level">
-<br>
-<input type="submit">
-<br>
-
+<form action={{ url('') }} method="POST" class="form">
+    @csrf 
+    <div>
+        <Label for="">Role</Label>
+        <label for="">Access Level</label>
+    </div> 
+    <div class="form-input">  
+    <label for=""> New Role</label>
+    <input type="text" name="role">
+    </div>
+    <div class="form-input">
+    <label for="">Access Level</label>
+    <input type="intager" name="access_level">
+    <input type="submit">
+    </div>
 
 </form>
 
