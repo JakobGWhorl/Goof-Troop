@@ -6,6 +6,7 @@ use App\Http\Controllers\Employee_Controller;
 use App\Http\Controllers\Registration_Employee_Controller;
 use App\Http\Controllers\Role_Controller;
 use App\Http\Controllers\Roster_Controller;
+use Illuminate\Support\Facades\DB;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,7 +19,7 @@ use App\Http\Controllers\Roster_Controller;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('HomePage');
 });
 
 
@@ -26,9 +27,10 @@ Route::get('/roles', function () {
     return view('roles');
 });
 
-Route::get('/roster', function () {
-    return view('roster');
+Route::get('/create/roles', function(){
+    return view('roles');
 });
+
 
 //Create Schedule
 Route::get('/patient/schedule', function(){
@@ -43,11 +45,25 @@ Route::get('/create/appointment', function(){
 
 //registration routes
 Route::get('/registration', function(){
-    return view('registration');
+    function code(){
+        $code =  rand(100000000000,999999999999);
+
+        // check DB
+        if( DB::table('patients')->select('family_code')->where('family_code','=',$code)->get() == '[]'){
+            return $code;
+        }
+        else{
+            return code();
+        }
+    }
+    return view('registration',['family_code'=>code()]);
 });
 Route::get('/login', function(){
     return view('login');
 });
 
+Route::get('/create/roster', function(){
+    return view('roster');
+});
 
 

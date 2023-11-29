@@ -96,8 +96,14 @@
             <label for="emergency_contact_relationship">Emergency Contact Relationship:</label>
             <input type="text" name="emergency_contact_relationship">
         </div>
+        <div class='form-input'>
+            <label for="family_code" style="height: 2em;margin-top: .5em;">Family Code:</label>
+            <input type="text" name="family_code" id="family_code" disabled value="{{ $family_code }}" style="height: 2em">
+        </div>
+        <input type="hidden" name="family_code" value="{{ $family_code }}">
         <input type="hidden" name="role" value="patient">
         <input type="hidden" name="admission_date" value="{{ date("Y-m-d H:i:s") }}">
+        
         <input type="submit">
 
     </div>
