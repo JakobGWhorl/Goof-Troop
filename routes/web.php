@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\DB;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('HomePage');
 });
 
 
@@ -27,9 +27,10 @@ Route::get('/roles', function () {
     return view('roles');
 });
 
-Route::get('/roster', function () {
-    return view('roster');
+Route::get('/create/roles', function(){
+    return view('roles');
 });
+
 
 //Create Schedule
 Route::get('/patient/schedule', function(){
@@ -61,5 +62,8 @@ Route::get('/login', function(){
     return view('login');
 });
 
+Route::get('/create/roster', function(){
+    return view('roster');
+});
 
 
