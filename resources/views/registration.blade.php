@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>New Employee Registration</title>
     {{-- Link to css --}}
-    <link rel="stylesheet" href={{ URL::asset('css/app.css'); }}>    
+    <link rel="stylesheet" href={{ URL::asset('css/app.css') ;}}>    
 </head>
 <body>
 
