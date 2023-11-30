@@ -28,7 +28,7 @@ Route::get('/', function () {
     return view('HomePage');
 });
 
-
+//Roles
 Route::get('/roles', function () {
     return view('roles');
 });
@@ -59,13 +59,15 @@ Route::get('/login', function(){
 
 Route::post('/login', [Application_Controller::class, 'process_login']);
 
+
+
 Route::get('/create/roster', function(){
     return view('roster');
 });
 
-Route::get('/create/roles', function(){
-    return view('roles');
-});
+// Patient Routes
+Route::get('/patient',function(){return view('patient_dashboard');});
+
 
 Route::get('/CareGiver',function(){return view('CareGiver');});
 
