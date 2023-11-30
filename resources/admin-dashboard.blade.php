@@ -8,6 +8,7 @@
     <button>Registration Approval</button>
     <button>Doctors Appointment</button>
     <button>Payments</button>
+    <button>Reports</button>
     <button>Roles</button>
     
 </body>
