@@ -22,11 +22,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::resource('employees', Employee_Controller::class);
-Route::resource('patients', Patient_Controller::class);
+Route::resource('employees',Employee_Controller::class);
+Route::resource('patients',Patient_Controller::class);
+Route::resource('rosters',Roster_Controller::class);
+Route::resource('roles',Role_Controller::class);
 
 
-Route::resource('rosters' ,Roster_Controller::class);
-
-Route::resource('roles' ,Role_Controller::class);
 

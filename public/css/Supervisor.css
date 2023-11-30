@@ -17,8 +17,15 @@
 .button{
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    padding-top: 125px;
-    padding-left: 75px;
+    padding-top: 6em;
+    padding-left: 6em;
+ 
+}
+.row2{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding-top: 4em;
+    padding-left: 11em;
  
 }
 
@@ -35,6 +42,7 @@
     transition: all 0.5s;
     cursor: pointer;
     margin: 5px;
+    height: 100px;
   }
   
   .button1 span {
