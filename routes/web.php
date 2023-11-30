@@ -25,7 +25,7 @@ use App\Http\Controllers\Roster_Controller;
 */
 
 Route::get('/', function () {
-    return view('HomePage');
+    return view('home_page');
 });
 
 //Roles
@@ -44,7 +44,7 @@ Route::get('/patient/schedule', function(){
 });
 //AppointmentCreate
 Route::get('/create/appointment', function(){
-    return view('AppointmentCreate');
+    return view('appointment_create');
 });
 
 
@@ -69,20 +69,20 @@ Route::get('/create/roster', function(){
 Route::get('/patient',function(){return view('patient_dashboard');});
 
 
-Route::get('/CareGiver',function(){return view('CareGiver');});
+Route::get('/CareGiver',function(){return view('caregiver');});
 
-Route::get('/Supervisor',function(){return view('Supervisor');});
+Route::get('/Supervisor',function(){return view('supervisor');});
 
-Route::get('/CaregiverHome',function(){return view('caregiverHome');});
+Route::get('/CaregiverHome',function(){return view('caregiver_Home');});
 
-Route::get('/RosterView',function(){return view('RosterView');});
+Route::get('/RosterView',function(){return view('roster_view');});
 
-Route::get('/AdminsReport',function(){return view('AdminsReport');});
+Route::get('/AdminsReport',function(){return view('admin_reports');});
 
 Route::get('/Employees',function(){return view('Employees');});
-
+Route::get('/admin_dashboard',function(){return view('Admin_dashboard');});
 Route::get('/Registration/Approval',function(){return view('approve_resgistration');});
-
-Route::get('/DoctorAppt',function(){return view('doctors_appointments');});
-
+Route::get('/doctors_appointments',function(){return view('Doctors_appointments');});
+Route::get('/payment_view',function(){return view('payments_view');});
+Route::get('/reports',function(){return view('admin_reports');});
 Route::get('/Doctor',function(){return view('Doctor');});
