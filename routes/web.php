@@ -109,3 +109,9 @@ Route::get('/RosterView',function(){return view('RosterView');});
 Route::get('/AdminsReport',function(){return view('AdminsReport');});
 
 Route::get('/Employees',function(){return view('Employees');});
+
+Route::get('/Registration/Approval',function(){return view('approve_resgistration');});
+
+Route::get('/DoctorAppt',function(){return view('doctors_appointments');});
+
+Route::get('/Doctor',function(){return view('Doctor');});
