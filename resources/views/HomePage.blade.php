@@ -11,7 +11,7 @@
 <body class="bodyHP">
     <div class="enter">
         <div class="header">
-            <h1>Old Person Home</h1>
+            <h1>Majima's Retirement Home</h1>
         </div>
 
         <div class="button">
