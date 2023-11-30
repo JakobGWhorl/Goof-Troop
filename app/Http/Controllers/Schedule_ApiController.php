@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Patient;
-
-class Patient_Controller extends Controller
+use App\Models\Schedule;
+class Schedule_ApiController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,17 +20,9 @@ class Patient_Controller extends Controller
      */
     public function store(Request $request)
     {
-        //
-        // $request->validate([
-        //     'first_name'=>'required',
-        //     'last_name'=>'required',
-        //     'role'=>'required',
-        //     'email'=>'required',
-        //     'phone'=>'required',
-        //     'password'=>'required',
-        //     'dob'=>'required'
-        // ]);
-        return Patient::create($request->all());
+        $request->validate([
+            "Date"=>'required'
+        ]);
     }
 
     /**
