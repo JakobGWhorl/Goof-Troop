@@ -87,5 +87,25 @@ Route::post('/login', function(Request $r){
         return "Successful Login!";
     else
         return view('login',['error'=>'Incorrect Password!']);
+
 });
 
+Route::get('/create/roster', function(){
+    return view('roster');
+});
+
+Route::get('/create/roles', function(){
+    return view('roles');
+});
+
+Route::get('/CareGiver',function(){return view('CareGiver');});
+
+Route::get('/Supervisor',function(){return view('Supervisor');});
+
+Route::get('/CaregiverHome',function(){return view('caregiverHome');});
+
+Route::get('/RosterView',function(){return view('RosterView');});
+
+Route::get('/AdminsReport',function(){return view('AdminsReport');});
+
+Route::get('/Employees',function(){return view('Employees');});
