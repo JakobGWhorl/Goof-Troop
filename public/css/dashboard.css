@@ -3,24 +3,22 @@
     justify-content: center;
     font-family: Garamond, serif;
     font-size:1.5rem;
-}
-
-.header {
     background-color: #3498db;
     color: white;
     padding: 20px;
+    margin: 1em;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     background: linear-gradient(to right, #52489C, #B9FAF8);
-  }
+}
 
-.button{
+.button-group{
     display: flex;
     padding-top: 200px;
     justify-content: center;
 }
 
-.button1 {
+.button {
     display: inline-block;
     border-radius: 4px;
     background-color: #B9FAF8;
@@ -33,18 +31,18 @@
     transition: all 0.5s;
     cursor: pointer;
     margin: 5px;
-  }
+}
   
-  .button1 span {
+.button span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
    
     
-  }
+}
   
-  .button1 span:after {
+.button span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
@@ -52,34 +50,24 @@
     right: -20px;
     transition: 1s;
     color: white;
-  }
-  .button1:hover{
-    background:linear-gradient( #52489C,#B298DC)
-    
-    
-  }
-  .button1:hover span {
+}
+
+.button:hover{
+    background:linear-gradient( #52489C,#B298DC);    
+}
+
+.button:hover span {
     padding-right: 25px;
     color: white;
-  }
+}
   
-  .button1:hover span:after {
+.button:hover span:after {
     opacity: 1;
     right: 0;
-    
-  }
+}
 
-  .bodyHP{
-    background:linear-gradient( #52489C,rgb(240,147,124));
- height: 100%;
- background-position: center;
- background-repeat: no-repeat;
- background-size: cover;
- margin-bottom: 15%;
- margin: 0;
-  }
-.enter{
-margin-bottom:19.6%;
+.content{
+    margin-bottom:19.6%;
 
 }
   
