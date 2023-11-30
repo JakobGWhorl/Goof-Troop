@@ -88,7 +88,7 @@ Route::post('/login', function(Request $r){
     else
         return view('login',['error'=>'Incorrect Password!']);
 
-
+});
 
 Route::get('/create/roster', function(){
     return view('roster');

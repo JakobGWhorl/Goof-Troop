@@ -33,5 +33,3 @@ Route::resource('rosters' ,Roster_Controller::class);
 
 Route::resource('roles' ,Role_Controller::class);
 
-Route::resource('patients', Patient_Controller::class);
-
