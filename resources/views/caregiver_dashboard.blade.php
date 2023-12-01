@@ -19,6 +19,12 @@
             <a href="http://127.0.0.1:8000/CaregiverHome"><button class="button" ><span>Home</span></button></a>
             <a href="http://127.0.0.1:8000/RosterView"><button class="button" ><span>Roster</span></button></a>
         </div>
+      
     </div>
 </body>
+<footer class="footer">
+    <form action={{ url('/Logout') }} method="POST" class="bottom">
+      @csrf
+     <input type="submit" value="Logout" class="logout_button">
+  </footer>
 </html>

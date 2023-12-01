@@ -22,7 +22,9 @@
              <input type="submit" value="Enter" >
 
          </form>
-        
+         <form action={{ url('/Logout') }} method="POST">
+            @csrf
+           <input type="submit" value="Logout">
         </div>
         <div class="middle">
             <h3>Missed Patient Activity</h3>
@@ -34,4 +36,9 @@
 
     </div>
 </body>
+<footer class="footer">
+    <form action={{ url('/Logout') }} method="POST" class="bottom">
+      @csrf
+     <input type="submit" value="Logout" class="logout_button">
+  </footer>
 </html>

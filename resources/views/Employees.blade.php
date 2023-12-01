@@ -55,7 +55,12 @@
             
             <a href="http://127.0.0.1:8000/Supervisor"> <button class="button1" style="vertical-align:middle"><span>Back To Dashboard</span></button></a>
          </div>
-
+         
     </div>
 </body>
+<footer class="footer">
+    <form action={{ url('/Logout') }} method="POST" class="bottom">
+      @csrf
+     <input type="submit" value="Logout" class="logout_button">
+  </footer>
 </html>

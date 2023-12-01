@@ -79,3 +79,69 @@
 
 }
   
+.logout_button{
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #B9FAF8;
+    border: none;
+    color:black;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 5em;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    height: 2em;
+    margin-bottom: 1em;
+}
+
+.logout_button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+   
+    
+}
+  
+.logout_button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 1s;
+    color: white;
+}
+
+.logout_button:hover{
+    background:linear-gradient( #52489C,#B298DC);    
+}
+
+.logout_button:hover span {
+    padding-right: 25px;
+    color: white;
+}
+  
+.logout_button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.bottom{
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+  .footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #B298DC;
+    color: white;
+    text-align: center;
+  }
