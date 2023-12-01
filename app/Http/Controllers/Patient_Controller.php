@@ -30,7 +30,8 @@ class Patient_Controller extends Controller
         //     'password'=>'required',
         //     'dob'=>'required'
         // ]);
-        return Patient::create($request->all());
+        Patient::create($request->all());
+        return view('landing_page');
     }
 
     /**
