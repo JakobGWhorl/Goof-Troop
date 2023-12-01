@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-
+    <link rel="stylesheet" href={{ URL::asset('css/app.css') }}>
     <title>Doctor's Appointment</title>
 </head>
     <body>
