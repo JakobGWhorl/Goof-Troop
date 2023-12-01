@@ -20,7 +20,11 @@ class Application_Controller extends Controller
                 return code();
             }
         }
-        return view('registration',['family_code'=>code()]);
+        function roles(){
+            $roles = DB::table('roles')->select('role','access_level')->whereNot('access_level','=',1)->get();
+            return json_decode(json_encode($roles),true);
+        }
+        return view('registration',['family_code'=>code(),'roles'=>roles()]);
     }
 
     // process login
@@ -49,5 +53,8 @@ class Application_Controller extends Controller
         else
             return view('login',['error'=>'Incorrect Password!']);
     
+    }
+    function Logout(){
+        return ("Your banned from new york");
     }
 }

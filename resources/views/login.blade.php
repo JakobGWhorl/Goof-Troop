@@ -22,8 +22,8 @@
                 <input type="password" name="password" id="password_field">
                 <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
             </div>
-            <input type="submit" value="Submit">
-           
+            <input class='submit' type="submit" value="Submit">
+            <a href="{{ url('/registration') }}"><button class = 'submit'>Don't have an account? Register here!</button></a>
             <div class='error'>
                 @isset($error)
                     {{ $error }}
@@ -32,7 +32,9 @@
                 
             
                 
-            
+            <form action={{ url('/Logout') }} method="POST">
+                @csrf
+               <input type="submit" value="Logout">
         </div>
     </form>
 </body>

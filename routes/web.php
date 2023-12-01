@@ -59,7 +59,7 @@ Route::get('/login', function(){
 
 Route::post('/login', [Application_Controller::class, 'process_login']);
 
-
+Route::post('/Logout', [Application_Controller::class, 'Logout']);
 
 Route::get('/create/roster', function(){
     return view('Roster');
@@ -86,6 +86,8 @@ Route::get('/registration_approval',function(){return view('Approve_Registration
 Route::get('/doctors_appointment',function(){return view('Doctors_Appointments');});
 Route::get('/payment_view',function(){return view('payments_view');});
 Route::get('/reports',function(){return view('Admin_Report');});
+
+Route::get('/patient/home',function(){return view('patient_home');});
 
 //doctor routes
 Route::get('/doctor',function(){return view('Doctor_Dashboard');});

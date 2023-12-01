@@ -20,18 +20,19 @@ Inside your form your layout should look like this
                 <label>
                 <input>
             </div>
-            <input type='submit'
+            <input class='submit' type='submit'
         </div>
     </form>
 
 */
-.form>div>h1, .form>div>input {
+.form>div>h1, .submit {
     text-align: center;
     width: 100%;
     margin:auto;
 }
-.form>div>input {
+.submit{
     background-color: #B8D0EB;
+    margin-top: 1em;
 }
 .form>div {
     color: black;
@@ -51,7 +52,7 @@ Inside your form your layout should look like this
     text-align: right;
     margin-right: 1em;
 }
-.form-input>input{
+.form-input>input, .form-input>select{
     width: 11em;
 }
 .error {

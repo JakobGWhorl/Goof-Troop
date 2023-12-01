@@ -19,6 +19,9 @@
             <a href="http://127.0.0.1:8000/registration"><button class="button1" style="vertical-align:middle"><span>Register</span></button></a>
             <a href=""> <button class="button1" style="vertical-align:middle"><span>Family Member Access</span></button></a>          
         </div>
+        <form action={{ url('/Logout') }} method="POST">
+            @csrf
+           <input type="submit" value="Logout">
     </div>
 </body>
 </html>
