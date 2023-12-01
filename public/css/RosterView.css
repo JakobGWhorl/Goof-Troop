@@ -57,9 +57,7 @@
     color: white;
   }
   .button1:hover{
-    background:linear-gradient( #52489C,#B298DC)
-    
-    
+    background:linear-gradient( #52489C,#B298DC)    
   }
   .button1:hover span {
     padding-right: 25px;
