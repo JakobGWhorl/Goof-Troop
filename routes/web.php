@@ -25,7 +25,7 @@ use App\Http\Controllers\Roster_Controller;
 */
 
 Route::get('/', function () {
-    return view('home_page');
+    return view('landing_page');
 });
 
 //Roles

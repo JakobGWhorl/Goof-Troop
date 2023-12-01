@@ -72,9 +72,6 @@
 
   .bodyHP{
     background :url(https://upload.wikimedia.org/wikipedia/commons/c/c8/Altja_j%C3%B5gi_Lahemaal.jpg);
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
     margin-bottom: 15%;
     margin: 0;
