@@ -14,16 +14,17 @@
             <h1>Roster View</h1>
         </div>
 
-        <div class="header">
-         <form action="Get">
+         <form action="Get" class="form">
             @csrf
-            <label> Date</label>
-            <input type="date" value="date"/>
-             <input type="submit" value="Enter" >
+            <div class="form-input">
+                <label> Date</label>
+                <input type="date" value="date"/>
+                <input type="submit" value="Enter" >
+            </div>
+            
 
          </form>
         
-        </div>
         <div class="button">
             <a href="http://127.0.0.1:8000/CareGiver"> <button class="button1" style="vertical-align:middle"><span>Back To Dashboard</span></button></a>
          </div>
