@@ -25,7 +25,7 @@ use App\Http\Controllers\Roster_Controller;
 */
 
 Route::get('/', function () {
-    return view('home_page');
+    return view('landing_page');
 });
 
 //Roles
@@ -68,21 +68,24 @@ Route::get('/create/roster', function(){
 // Patient Routes
 Route::get('/patient',function(){return view('patient_dashboard');});
 
-
-Route::get('/CareGiver',function(){return view('caregiver');});
-
-Route::get('/Supervisor',function(){return view('supervisor');});
-
+//caregiver routes
+Route::get('/caregiver',function(){return view('caregiver_dashboard');});
 Route::get('/CaregiverHome',function(){return view('caregiver_Home');});
+
+//supervisor routes
+Route::get('/supervisor',function(){return view('supervisor_dashboard');});
 
 Route::get('/RosterView',function(){return view('roster_view');});
 
 Route::get('/AdminsReport',function(){return view('admin_reports');});
 
 Route::get('/Employees',function(){return view('Employees');});
-Route::get('/admin_dashboard',function(){return view('Admin_dashboard');});
+//admin routes
+Route::get('/admin',function(){return view('admin_dashboard');});
 Route::get('/Registration/Approval',function(){return view('approve_resgistration');});
 Route::get('/doctors_appointments',function(){return view('Doctors_appointments');});
 Route::get('/payment_view',function(){return view('payments_view');});
 Route::get('/reports',function(){return view('admin_reports');});
-Route::get('/Doctor',function(){return view('Doctor');});
+
+//doctor routes
+Route::get('/doctor',function(){return view('doctor_dashboard');});
