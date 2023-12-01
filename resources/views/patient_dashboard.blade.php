@@ -23,7 +23,10 @@
 </body>
 <footer class="footer">
     <form action={{ url('/Logout') }} method="POST" class="bottom">
-      @csrf
-     <input type="submit" value="Logout" class="logout_button">
+        @csrf
+        <input type="submit" value="Logout" class="logout_button">
+      </form>
+       
+      
   </footer>
 </html>
