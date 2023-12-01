@@ -14,7 +14,7 @@
 
 .button-group{
     display: flex;
-    padding-top: 200px;
+    padding-top: 1em;
     justify-content: center;
 }
 

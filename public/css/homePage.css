@@ -16,7 +16,7 @@
 
 .button{
     display: flex;
-    padding-top: 200px;
+    padding-top: 2em;
     justify-content: center;
 }
 
@@ -29,10 +29,11 @@
     text-align: center;
     font-size: 28px;
     padding: 20px;
-    width: 200px;
+    width: 8em;
     transition: all 0.5s;
     cursor: pointer;
     margin: 5px;
+    height: 5em;
   }
   
   .button1 span {
@@ -70,13 +71,13 @@
   }
 
   .bodyHP{
-background :url(https://upload.wikimedia.org/wikipedia/commons/c/c8/Altja_j%C3%B5gi_Lahemaal.jpg);
- height: 100%;
- background-position: center;
- background-repeat: no-repeat;
- background-size: cover;
- margin-bottom: 15%;
- margin: 0;
+    background :url(https://upload.wikimedia.org/wikipedia/commons/c/c8/Altja_j%C3%B5gi_Lahemaal.jpg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 15%;
+    margin: 0;
   }
 .enter{
 margin-bottom:15%;
