@@ -28,28 +28,71 @@ class Application_Controller extends Controller
     }
 
     // process login
+    // TODO: Add check for if account is approved before login is granted
     function process_login(Request $r){
+        $type = "";
         $account = null;
         //get email from request
         $email = $r->all('email');
         
         //search for email
-        if(DB::table('patients')->select('email')->where('email','=',$email)->get() == '[]' || DB::table('employees')->select('email')->where('email','=',$email)->get() == '[]'){
+        if(DB::table('patients')->select('email')->where('email','=',$email)->get() == '[]' && DB::table('employees')->select('email')->where('email','=',$email)->get() == '[]'){
             return view('login',['error'=>'No Account with such email!']);
         }
         elseif(DB::table('patients')->select('email')->where('email','=',$email)->get() == '[]'){
-            $account = DB::table('employees')->select('email','password')->where('email','=',$email)->get()[0];
+            $account = DB::table('employees')->select('employee_id','role','email','password')->where('email','=',$email)->get()[0];
+            
         }
         else{
-            $account = DB::table('patients')->select('email','password')->where('email','=',$email)->get()[0];
+            $type = 'patient';
+            $account = DB::table('patients')->select('patient_id','role','email','password')->where('email','=',$email)->get()[0];
         } 
         
         //get password from request
         $password = $r->all('password')['password'];
       
         //passwords match?
-        if($password == $account->password)
-            return "Successful Login!";
+        if($password == $account->password){
+            //successful login
+            //store user id
+            if($type == 'patient'){
+                session(['id'=>$account->patient_id]);
+            }else{
+                session(['id'=>$account->employee_id]);
+            }
+            //get access level stored
+            session(['access'=>DB::table('roles')->select('access_level')->where('role','=',$account->role)->get()[0]->access_level]);
+            
+            //set dashboard url
+            $dashboard ='';
+            switch(session('access')){
+                
+                case 1:
+                    //Patient
+                    $dashboard = '/patient';
+                    break;
+                case 2:
+                    //Caregiver
+                    $dashboard = '/caregiver';
+                    break;
+                case 3:
+                    //Doctor
+                    $dashboard = '/doctor';
+                    break;
+                case 4:
+                    //Supervisor
+                    $dashboard = '/supervisor';
+                    break;
+                case 5:
+                    //Admin
+                    $dashboard = '/admin';
+                    break;
+                
+            }
+            session(['dashboard'=>$dashboard]);
+            return redirect(session('dashboard'));
+            // return $r->session()->all();
+        }
         else
             return view('login',['error'=>'Incorrect Password!']);
     
