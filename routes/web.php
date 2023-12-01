@@ -59,7 +59,7 @@ Route::get('/login', function(){
 
 Route::post('/login', [Application_Controller::class, 'process_login']);
 
-
+Route::post('/Logout', [Application_Controller::class, 'Logout']);
 
 Route::get('/create/roster', function(){
     return view('roster');
@@ -82,7 +82,7 @@ Route::get('/AdminsReport',function(){return view('admin_reports');});
 Route::get('/Employees',function(){return view('Employees');});
 //admin routes
 Route::get('/admin',function(){return view('admin_dashboard');});
-Route::get('/Registration/Approval',function(){return view('approve_resgistration');});
+Route::get('/Registration/Approval',function(){return view('approve_registration');});
 Route::get('/doctors_appointments',function(){return view('Doctors_appointments');});
 Route::get('/payment_view',function(){return view('payments_view');});
 Route::get('/reports',function(){return view('admin_reports');});

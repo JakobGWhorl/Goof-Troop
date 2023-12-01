@@ -48,10 +48,14 @@
 <br>
 </div>
     </div>
-
+    
 </form>
 
 
-
 </body>
+<footer class="footer">
+    <form action={{ url('/Logout') }} method="POST" class="bottom">
+      @csrf
+     <input type="submit" value="Logout" class="logout_button">
+  </footer>
 </html>
