@@ -9,8 +9,6 @@
 </head>
 <body>
 
-<form action={{ url('') }} method="POST">
-
 <<<<<<< HEAD
 <form action={{ url('') }} method="POST" class="form">
     @csrf
@@ -23,28 +21,14 @@
     <input type="text" name="role">
     </div>
     <div class="form-input">
-    <label for="">Access Level</label>
-    <input type="intager" name="access_level">
+        <label for="">Access Level</label>
+        <input type="intager" name="access_level">
     <input type="submit">
-=======
-<form action={{ url('/api/roles') }} method="POST" class="form">
-    @csrf
-    <div>
-        <h1>Create a Role</h1>
-<div class="form-input">
-<label for="">Role</label>
-<input type="text" name="role">
-<label for="">Access Level</label>
-<input type="number" name="access_level">
-<input type="submit">
-<br>
-</div>
->>>>>>> 8df578594644cc1890f4337d378fff0d2aeeb90b
     </div>
 
 </form>
 
-
+<a href="http://127.0.0.1:8000/admin_dashboard"><button><span>Back</span></button></a>
 
 </body>
 </html>
