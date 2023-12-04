@@ -15,7 +15,11 @@
         </div>
 
 
-    <div class="button">
-        <a href="http://127.0.0.1:8000/Doctor"> <button class="button"><span>Dashboard</span></button></a>
 
+    <div class="button">
+        <div> <a href="http://127.0.0.1:8000/Patients"> <button class="button1" style="vertical-align:middle"><span>Patient List</span></button></a></div>
+        <a href="http://127.0.0.1:8000/Doctor"> <button class="button1"><span>Return to Dashboard</span></button></a>
     </div>
+
+</body>
+<html>
