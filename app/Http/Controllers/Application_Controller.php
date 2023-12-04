@@ -8,7 +8,8 @@ use Illuminate\Support\Facades\DB;
 class Application_Controller extends Controller
 {
     //registration form
-    function registration_form(){
+    function registration_form($error=null){
+        // return $error;
         function code(){
             $code =  rand(100000000000,999999999999);
     
@@ -24,7 +25,7 @@ class Application_Controller extends Controller
             $roles = DB::table('roles')->select('role','access_level')->whereNot('access_level','=',1)->get();
             return json_decode(json_encode($roles),true);
         }
-        return view('registration',['family_code'=>code(),'roles'=>roles()]);
+        return view('registration',['family_code'=>code(),'roles'=>roles(),'error'=>$error]);
     }
 
     // process login
@@ -60,7 +61,7 @@ class Application_Controller extends Controller
             }else{
                 session(['id'=>$account->employee_id]);
             }
-            //get access level stored
+            //store access level in session
             session(['access'=>DB::table('roles')->select('access_level')->where('role','=',$account->role)->get()[0]->access_level]);
             
             //set dashboard url
