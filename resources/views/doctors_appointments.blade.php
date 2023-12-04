@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" href={{ URL::asset('css/app.css') }}>
+    <link rel="stylesheet" href={{ URL::asset('css/dashboard.css') }}>
     <title>Doctor's Appointment</title>
 </head>
     <body>
@@ -31,7 +32,7 @@
             </div>
             
         </form>
-        <a href="http://127.0.0.1:8000/admin_dashboard"><button><span>Back</span></button></a>
+
     </body>
     <footer class="footer">
         <div class="button">
@@ -42,6 +43,7 @@
             <a href="{{ session('dashboard') }}"> <button class="button1" style="vertical-align:middle"><span>Back To Dashboard</span></button></a>
         </div>        
     </footer>
+
 </html>
 
 <div>

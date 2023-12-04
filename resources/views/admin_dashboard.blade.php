@@ -13,9 +13,7 @@
         <div class="header"> 
             <h1>Admin Dashboard</h1>
         </div>
-        <form action={{ url('/Logout') }} method="POST">
-            @csrf
-           <input type="submit" value="Logout">
+        
     
         <div class="button-group">
             <a href="http://127.0.0.1:8000/registration_approval"><button class="button"><span>Registration Approval</span></button></a>
@@ -32,7 +30,10 @@
 </body>
 <footer class="footer">
     <form action={{ url('/Logout') }} method="POST" class="bottom">
-      @csrf
-     <input type="submit" value="Logout" class="logout_button">
+        @csrf
+        <input type="submit" value="Logout" class="logout_button">
+      </form>
+       
+    
   </footer>
 </html>

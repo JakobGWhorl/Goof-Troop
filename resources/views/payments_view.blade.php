@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" href={{ URL::asset('css/app.css') }}>
+    <link rel="stylesheet" href={{ URL::asset('css/dashboard.css') }}>
     <title>Payments Due</title>
 </head>
 <body>
@@ -10,15 +11,14 @@
             <h1>Payments Due</h1>
             <Label>payments</Label>
 
-            <div id="buttons">
-                <button id="back">Back</button>
-            </div>
+            
         </div>
         
     </form>
 
 </body>
 <footer class="footer">
+
     <div class="button">
         <form action={{ url('/Logout') }} method="POST" class="bottom">
             @csrf
@@ -28,4 +28,5 @@
     </div>
     
 </footer>
+
 </html>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href={{ URL::asset('css/app.css') }}>
-    <link rel="stylesheet" href={{ URL::asset('css/CaregiverHome.css') }}>
+    <link rel="stylesheet" href={{ URL::asset('css/dashboard.css') }}>
     <title>caregiver Home</title>
 </head>
 <body class="bodyHP">
@@ -14,18 +14,21 @@
             <h1>caregiver Home</h1>
         </div>
 
-        <div class="button">
-          <div> <a href=""> <button class="button1" style="vertical-align:middle"><span>List of Patients</span></button></a></div>
-          <div class="button">
-            <a href="{{ session('dashboard') }}"> <button class="button1" style="vertical-align:middle"><span>Back To Dashboard</span></button></a>
+
+        <div class="button-group">
+          <div> <a href=""> <button class="button" style="vertical-align:middle"><span>List of Patients</span></button></a></div>
          </div>
-        </div>
         
     </div>
 </body>
 <footer class="footer">
-    <form action={{ url('/Logout') }} method="POST" class="bottom">
-      @csrf
-     <input type="submit" value="Logout" class="logout_button">
+    <div class="bottom">
+      <form action={{ url('/Logout') }} method="POST" >
+        @csrf
+        <input type="submit" value="Logout" class="logout_button">
+        
+      </form>
+     <a href="{{ session('dashboard') }}"> <button class="button1" style="vertical-align:middle"><span>Back To Dashboard</span></button></a>
+    </div>
   </footer>
 </html>

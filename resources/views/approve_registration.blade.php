@@ -3,6 +3,7 @@
     <link rel="stylesheet" href={{ URL::asset('css/app.css'); }}>
 <head>
     <link rel="stylesheet" href={{ URL::asset('css/app.css') }}>
+    <link rel="stylesheet" href={{ URL::asset('css/dashboard.css') }}>
     <title>Registration Approval</title>
 </head>
 <body>
@@ -28,6 +29,7 @@
     </form>
     
 </body>
+
 <footer class="footer">    
     <div class="button">
         <form action={{ url('/Logout') }} method="POST" class="bottom">
