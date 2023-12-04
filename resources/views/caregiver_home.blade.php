@@ -16,7 +16,7 @@
 
         <div class="button-group">
           <div> <a href=""> <button class="button" style="vertical-align:middle"><span>List of Patients</span></button></a></div>
-          <div> <a href="http://127.0.0.1:8000/CareGiver"><button class="button" style="vertical-align:middle"><span>Return to Dashboard</span></button></a></div>
+          
          
         </div>
         

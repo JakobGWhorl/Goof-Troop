@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href={{ URL::asset('css/app.css'); }}>
-    <link rel="stylesheet" href={{ URL::asset('css/RosterView.css'); }}>
+    <link rel="stylesheet" href={{ URL::asset('css/dashboard.css'); }}>
     <title>Supervisor Dashboard</title>
 </head>
 <body class="bodyHP">
@@ -25,9 +25,7 @@
 
          </form>
         
-        <div class="button">
-            <a href="http://127.0.0.1:8000/CareGiver"> <button class="button1" style="vertical-align:middle"><span>Back To Dashboard</span></button></a>
-         </div>
+        
          
 
     </div>

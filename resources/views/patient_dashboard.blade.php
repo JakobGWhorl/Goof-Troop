@@ -15,8 +15,8 @@
         </div>
 
         <div class="button-group">
-            <a href=""> <button class="button" ><span>Home</span></button></a>
-            <a href="http://127.0.0.1:8000/RosterView"><button class="button" ><span>Roster</span></button></a>
+            <a href="http://127.0.0.1:8000/patient/home"> <button class="button" ><span>Home</span></button></a>
+            <a href="http://127.0.0.1:8000/roster_view"><button class="button" ><span>Roster</span></button></a>
         </div>
        
     </div>
