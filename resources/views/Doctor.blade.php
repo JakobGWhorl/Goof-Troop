@@ -16,7 +16,7 @@
 
         <div class="button">
           <div> <a href=""> <button class="button1" style="vertical-align:middle"><span>Patients</span></button></a></div>
-          <div> <a href=""><button class="button1" style="vertical-align:middle"><span>Home</span></button></a></div>
+          <div> <a href="http://127.0.0.1:8000/Doctor_home"><button class="button1" style="vertical-align:middle"><span>Home</span></button></a></div>
           <div><a href=""><button class="button1" style="vertical-align:middle"><span>Prescriptions</span></button></a></div>
         </div>
     </div>

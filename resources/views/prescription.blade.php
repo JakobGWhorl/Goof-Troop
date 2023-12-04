@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +29,7 @@
         <label for="">Date</label>
         <input type="timestamp" name="date">
         <br>
-        <input type="submit">
+        <input type="submit"
         <br>
 
 
