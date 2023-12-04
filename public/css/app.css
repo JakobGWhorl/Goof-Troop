@@ -55,10 +55,14 @@ Inside your form your layout should look like this
 .form-input>input, .form-input>select{
     width: 11em;
 }
-.error {
+.error {    
     text-align: center;
     color: #FF0035;
     font-weight: bold;
-    margin-top: 1em;
+    width:15em;
+    margin:auto;
+    margin-top: 1em;  
+    background-color: #B9FAF8;  
 }
+
 
