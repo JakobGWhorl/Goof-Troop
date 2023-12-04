@@ -85,6 +85,12 @@ Route::get('/admin',function(){return view('Admin_Dashboard');});
 Route::get('/registration_approval',function(){return view('Approve_Registration');});
 Route::get('/doctors_appointment',function(){return view('Doctors_Appointments');});
 Route::get('/payment_view',function(){return view('payments_view');});
+Route::get('/reports',function(){return view('admin_reports');});
+Route::get('/doctor',function(){return view('Doctor');});
+Route::get('/doctor_home',function(){return view('Doctor_home');});
+Route::get('/prescriptions',function(){return view('prescriptions');});
+Route::get('/patient_of_doctor',function(){return view('patient_of_doctor');});
+Route::get('/patients',function(){return view('patients');});
 Route::get('/reports',function(){return view('Admin_Report');});
 
 Route::get('/patient/home',function(){return view('patient_home');});

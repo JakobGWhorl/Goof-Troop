@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class prescription extends Controller
+class Payment_Controller extends Controller
 {
-    //
+public function index();
 }
