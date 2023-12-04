@@ -15,9 +15,29 @@
   }
 
 .button{
-    display: flex;
-    padding-top: 200px;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding-top: 6em;
+    padding-left: 6em;
+    
+ 
+}
+.button label{
+    float: left;
+    width: 40%;
+    text-align: right;
+}
+.button input{
+    float: left;
+    width: 30%;
+}
+
+.row2{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding-top: 4em;
+    padding-left: 25em;
+ 
 }
 
 .button1 {
@@ -33,6 +53,7 @@
     transition: all 0.5s;
     cursor: pointer;
     margin: 5px;
+    height: 100px;
   }
   
   .button1 span {
@@ -70,7 +91,7 @@
   }
 
   .bodyHP{
-background :url(https://upload.wikimedia.org/wikipedia/commons/c/c8/Altja_j%C3%B5gi_Lahemaal.jpg);
+    background:linear-gradient( #52489C,rgb(240,147,124));
  height: 100%;
  background-position: center;
  background-repeat: no-repeat;
@@ -79,7 +100,7 @@ background :url(https://upload.wikimedia.org/wikipedia/commons/c/c8/Altja_j%C3%B
  margin: 0;
   }
 .enter{
-margin-bottom:15%;
+margin-bottom:19.6%;
 
 }
   

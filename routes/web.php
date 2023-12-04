@@ -25,16 +25,16 @@ use App\Http\Controllers\Roster_Controller;
 */
 
 Route::get('/', function () {
-    return view('home_page');
+    return view('Landing_page');
 });
 
 //Roles
 Route::get('/roles', function () {
-    return view('roles');
+    return view('Roles');
 });
 
 Route::get('/create/roles', function(){
-    return view('roles');
+    return view('Roles');
 });
 
 
@@ -44,7 +44,7 @@ Route::get('/patient/schedule', function(){
 });
 //AppointmentCreate
 Route::get('/create/appointment', function(){
-    return view('appointment_create');
+    return view('Appointment_Create');
 });
 
 
@@ -54,39 +54,46 @@ Route::get('/registration', [Application_Controller::class,'registration_form'])
 
 //login routes
 Route::get('/login', function(){
-    return view('login');
+    return view('Login');
 });
 
 Route::post('/login', [Application_Controller::class, 'process_login']);
 
-
+Route::post('/Logout', [Application_Controller::class, 'Logout']);
 
 Route::get('/create/roster', function(){
-    return view('roster');
+    return view('Roster');
 });
 
 // Patient Routes
-Route::get('/patient',function(){return view('patient_dashboard');});
+Route::get('/patient',function(){return view('Patient_Dashboard');});
 
+//caregiver routes
+Route::get('/caregiver',function(){return view('Caregiver_Dashboard');});
+Route::get('/caregiver_home',function(){return view('Caregiver_Home');});
 
-Route::get('/CareGiver',function(){return view('caregiver');});
+//supervisor routes
+Route::get('/supervisor',function(){return view('Supervisor_Dashboard');});
 
-Route::get('/Supervisor',function(){return view('supervisor');});
+Route::get('/roster_view',function(){return view('Roster_View');});
 
-Route::get('/CaregiverHome',function(){return view('caregiver_Home');});
+Route::get('/admins_report',function(){return view('Admin_Report');});
 
-Route::get('/RosterView',function(){return view('roster_view');});
-
-Route::get('/AdminsReport',function(){return view('admin_reports');});
-
-Route::get('/Employees',function(){return view('Employees');});
-Route::get('/admin_dashboard',function(){return view('Admin_dashboard');});
-Route::get('/Registration/Approval',function(){return view('approve_resgistration');});
-Route::get('/doctors_appointments',function(){return view('Doctors_appointments');});
+Route::get('/employees',function(){return view('Employees');});
+//admin routes
+Route::get('/admin',function(){return view('Admin_Dashboard');});
+Route::get('/registration_approval',function(){return view('Approve_Registration');});
+Route::get('/doctors_appointment',function(){return view('Doctors_Appointments');});
 Route::get('/payment_view',function(){return view('payments_view');});
 Route::get('/reports',function(){return view('admin_reports');});
-Route::get('/Doctor',function(){return view('Doctor');});
-Route::get('/Doctor_home',function(){return view('Doctor_home');});
+Route::get('/doctor',function(){return view('Doctor');});
+Route::get('/doctor_home',function(){return view('Doctor_home');});
 Route::get('/prescriptions',function(){return view('prescriptions');});
 Route::get('/patient_of_doctor',function(){return view('patient_of_doctor');});
 Route::get('/patients',function(){return view('patients');});
+Route::get('/reports',function(){return view('Admin_Report');});
+
+Route::get('/patient/home',function(){return view('patient_home');});
+
+//doctor routes
+Route::get('/doctor',function(){return view('Doctor_Dashboard');});

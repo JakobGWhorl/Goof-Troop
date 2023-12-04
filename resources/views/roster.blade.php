@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href={{ URL::asset('css/app.css'); }}>
+    <link rel="stylesheet" href={{ URL::asset('css/app.css') }}>
     <title>Roster</title>
 </head>
 <body>
@@ -48,10 +48,14 @@
 <br>
 </div>
     </div>
-
+    
 </form>
 
 
-
 </body>
+<footer class="footer">
+    <form action={{ url('/Logout') }} method="POST" class="bottom">
+      @csrf
+     <input type="submit" value="Logout" class="logout_button">
+  </footer>
 </html>

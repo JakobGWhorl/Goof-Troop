@@ -29,7 +29,8 @@ class Employee_Controller extends Controller
             'password'=>'required',
             'dob'=>'required'
         ]);
-        return Employee::create($request->all());
+        Employee::create($request->all());
+        return view('landing_page');
     }
 
     /**
