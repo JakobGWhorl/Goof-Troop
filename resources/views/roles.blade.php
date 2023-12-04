@@ -8,16 +8,17 @@
     <title>Roles</title>
 </head>
 <body>
-    
+
+<<<<<<< HEAD
 <form action={{ url('') }} method="POST" class="form">
-    @csrf 
+    @csrf
     <div>
         <Label for="">Role</Label>
         <label for="">Access Level</label>
-    </div> 
-    <div class="form-input">  
-        <label for=""> New Role</label>
-        <input type="text" name="role">
+    </div>
+    <div class="form-input">
+    <label for=""> New Role</label>
+    <input type="text" name="role">
     </div>
     <div class="form-input">
         <label for="">Access Level</label>
