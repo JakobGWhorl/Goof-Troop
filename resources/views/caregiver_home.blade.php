@@ -16,8 +16,9 @@
 
         <div class="button">
           <div> <a href=""> <button class="button1" style="vertical-align:middle"><span>List of Patients</span></button></a></div>
-          <div> <a href="http://127.0.0.1:8000/CareGiver"><button class="button1" style="vertical-align:middle"><span>Return to Dashboard</span></button></a></div>
-         
+          <div class="button">
+            <a href="{{ session('dashboard') }}"> <button class="button1" style="vertical-align:middle"><span>Back To Dashboard</span></button></a>
+         </div>
         </div>
     </div>
 </body>

@@ -31,7 +31,9 @@
             </div>
             
         </form>
-        <a href="http://127.0.0.1:8000/admin_dashboard"><button><span>Back</span></button></a>
+        <div class="button">
+            <a href="{{ session('dashboard') }}"> <button class="button1" style="vertical-align:middle"><span>Back To Dashboard</span></button></a>
+         </div>
     </body>
 </html>
 
