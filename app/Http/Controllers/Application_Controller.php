@@ -98,4 +98,7 @@ class Application_Controller extends Controller
             return view('login',['error'=>'Incorrect Password!']);
     
     }
+    function Logout(){
+        return ("Your banned from new york");
+    }
 }

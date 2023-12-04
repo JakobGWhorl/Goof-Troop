@@ -8,16 +8,17 @@
     <title>Roles</title>
 </head>
 <body>
-    
+
+<<<<<<< HEAD
 <form action={{ url('') }} method="POST" class="form">
-    @csrf 
+    @csrf
     <div>
         <Label for="">Role</Label>
         <label for="">Access Level</label>
-    </div> 
-    <div class="form-input">  
-        <label for=""> New Role</label>
-        <input type="text" name="role">
+    </div>
+    <div class="form-input">
+    <label for=""> New Role</label>
+    <input type="text" name="role">
     </div>
     <div class="form-input">
         <label for="">Access Level</label>
@@ -27,7 +28,15 @@
 
 </form>
 
+
 <a href="http://127.0.0.1:8000/admin_dashboard"><button><span>Back</span></button></a>
 
+</form>
+
 </body>
+<footer class="footer">
+    <form action={{ url('/Logout') }} method="POST" class="bottom">
+      @csrf
+     <input type="submit" value="Logout" class="logout_button">
+  </footer>
 </html>

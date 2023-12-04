@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href={{ URL::asset('css/app.css'); }}>
-    <link rel="stylesheet" href={{ URL::asset('css/AdminReport.css'); }}>
+    <link rel="stylesheet" href={{ URL::asset('css/app.css') }}>
+    <link rel="stylesheet" href={{ URL::asset('css/AdminReport.css') }}>
     <title>Supervisor Dashboard</title>
 </head>
 <body class="bodyHP">
@@ -22,7 +22,9 @@
              <input type="submit" value="Enter" >
 
          </form>
-        
+         <form action={{ url('/Logout') }} method="POST">
+            @csrf
+           <input type="submit" value="Logout">
         </div>
         <div class="middle">
             <h3>Missed Patient Activity</h3>
@@ -33,4 +35,9 @@
 
     </div>
 </body>
+<footer class="footer">
+    <form action={{ url('/Logout') }} method="POST" class="bottom">
+      @csrf
+     <input type="submit" value="Logout" class="logout_button">
+  </footer>
 </html>

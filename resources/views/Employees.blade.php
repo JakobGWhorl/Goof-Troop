@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href={{ URL::asset('css/app.css'); }}>
-    <link rel="stylesheet" href={{ URL::asset('css/Employees.css'); }}>
+    <link rel="stylesheet" href={{ URL::asset('css/app.css') }}>
+    <link rel="stylesheet" href={{ URL::asset('css/Employees.css') }}>
     <title>Employees</title>
 </head>
 <body class="bodyHP">
@@ -15,35 +15,37 @@
         </div>
 
         <div class="header">
-         <form action="Get">
+         <form action="Get" class="form">
             @csrf
-            <label> ID</label>
-            <input type="integer" />
-            <br>
-            <label> First Name</label>
-            <input type="text" />
-            <br>
-            <label> Last Name</label>
-            <input type="text" />
-            <br>
-            <label> Role</label>
-            <input type="text" />
-            <br>
-            <label> Email</label>
-            <input type="text" />
-            <br>
-            <label> Phone</label>
-            <input type="text" />
-            <br>
-            <label> Password</label>
-            <input type="text" />
-            <br>
-            <label> DOB</label>
-            <input type="text" />
-            <br>
-            <label> Salary</label>
-            <input type="integer" /><br>
-             <input type="submit" value="Search" >
+            <div class="form-input">
+                <label> ID</label>
+                <input type="integer" />
+                <label> First Name</label>
+                <input type="text" />
+
+                <label> Last Name</label>
+                <input type="text" />
+
+                <label> Role</label>
+                <input type="text" />
+
+                <label> Email</label>
+                <input type="text" />
+
+                <label> Phone</label>
+                <input type="text" />
+                
+                <label> Password</label>
+                <input type="text" />
+                
+                <label> DOB</label>
+                <input type="text" />
+                
+                <label> Salary</label>
+                <input type="integer" /><br>
+                <input type="submit" value="Search" >
+            </div>
+
 
          </form>
         
@@ -54,7 +56,12 @@
         <div class="button">
             <a href="{{ session('dashboard') }}"> <button class="button1" style="vertical-align:middle"><span>Back To Dashboard</span></button></a>
          </div>
-
+         
     </div>
 </body>
+<footer class="footer">
+    <form action={{ url('/Logout') }} method="POST" class="bottom">
+      @csrf
+     <input type="submit" value="Logout" class="logout_button">
+  </footer>
 </html>

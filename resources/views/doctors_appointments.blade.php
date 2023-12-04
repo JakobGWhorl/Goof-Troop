@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-
+    <link rel="stylesheet" href={{ URL::asset('css/app.css') }}>
     <title>Doctor's Appointment</title>
 </head>
     <body>
@@ -31,10 +31,17 @@
             </div>
             
         </form>
-        <div class="button">
-            <a href="{{ session('dashboard') }}"> <button class="button1" style="vertical-align:middle"><span>Back To Dashboard</span></button></a>
-         </div>
+        <a href="http://127.0.0.1:8000/admin_dashboard"><button><span>Back</span></button></a>
     </body>
+    <footer class="footer">
+        <div class="button">
+            <form action={{ url('/Logout') }} method="POST" class="bottom">
+                @csrf
+               <input type="submit" value="Logout" class="logout_button">
+            </form>
+            <a href="{{ session('dashboard') }}"> <button class="button1" style="vertical-align:middle"><span>Back To Dashboard</span></button></a>
+        </div>        
+    </footer>
 </html>
 
 <div>
