@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href={{ URL::asset('css/app.css'); }}>
     <link rel="stylesheet" href={{ URL::asset('css/patient_list.css'); }}>
+    <link rel="stylesheet" href={{ URL::asset('css/dashboard.css') }}>
+
     <title>Patients</title>
 </head>
 <body>
@@ -49,9 +51,17 @@
             Search Patient Admission Date</label>
         <input type="text" name="" id="">
     </div>
-    <div class='button'>
-    <div> <a href="http://127.0.0.1:8000/Doctor"> <button class="button1" style="vertical-align:middle"><span>Return to Dashboard</span></button></a></div>
-    </div>
+    
   </h4>
 </div>
+<footer class="footer">
+    <div class="bottom">
+        <form action={{ url('/Logout') }} method="POST" >
+            @csrf
+            <input type="submit" value="Logout" class="logout_button">
+            
+          </form>
+          <a href="http://127.0.0.1:8000/doctor"> <button class="back_button" style="vertical-align:middle"><span>Back</span></button></a>
+        </div>
+  </footer>
 </html>
