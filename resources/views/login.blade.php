@@ -23,19 +23,17 @@
                 <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
             </div>
             <input class='submit' type="submit" value="Submit">
-            <a href="{{ url('/registration') }}"><button class = 'submit'>Don't have an account? Register here!</button></a>
+            
             <div class='error'>
                 @isset($error)
                     {{ $error }}
                 @endisset
-            </div>
-                
-            
-                
-            <form action={{ url('/Logout') }} method="POST">
-                @csrf
-               <input type="submit" value="Logout">
+            </div>         
         </div>
     </form>
+    <div style="width:12em;margin:auto;">
+        <a style='' href="{{ url('/registration') }}"><button>Don't have an account? Register here!</button></a>
+
+    </div>
 </body>
 </html>

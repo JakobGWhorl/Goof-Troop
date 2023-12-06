@@ -54,15 +54,19 @@
             <h3>Employee List</h3>
         </div>
         <div class="button">
-            
-            <a href="http://127.0.0.1:8000/Supervisor"> <button class="button1" style="vertical-align:middle"><span>Back To Dashboard</span></button></a>
+            <a href="{{ session('dashboard') }}"> <button class="button1" style="vertical-align:middle"><span>Back To Dashboard</span></button></a>
          </div>
          
     </div>
 </body>
 <footer class="footer">
-    <form action={{ url('/Logout') }} method="POST" class="bottom">
-      @csrf
-     <input type="submit" value="Logout" class="logout_button">
+    <div class="bottom">
+        <form action={{ url('/Logout') }} method="POST" >
+            @csrf
+            <input type="submit" value="Logout" class="logout_button">
+            
+          </form>
+          <a href="http://127.0.0.1:8000/caregiver"> <button class="back_button" style="vertical-align:middle"><span>Back</span></button></a>
+        </div>
   </footer>
 </html>
