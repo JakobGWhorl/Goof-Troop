@@ -21,7 +21,7 @@
         </div>
         <form action={{ url('/Logout') }} method="POST">
             @csrf
-           <input type="submit" value="Logout">
+           <input type="submit" value="Logout" class="app_button">
     </div>
 </body>
 </html>

@@ -7,7 +7,7 @@
         <form action={{ url("") }} method="POST" class="form">
             @csrf
             <div>
-                <h1>Doctor's Appointment</h1>
+                <h1 class="title">Doctor's Appointment</h1>
                 <div class="form-input">
                     <Label>Patient ID: </Label>
                     <input type="text" name="patient_id">    
@@ -24,9 +24,9 @@
                     <label>Patient Name: </label>
                     <input type="text" name="patient_name">    
                 </div>
-                <div id="buttons">
-                    <button id="ok">Ok</button>
-                    <button id="cancel">Cancel</button>
+                <div class="form-input">
+                    <button id="ok" class="app_button">Ok</button>
+                    <button id="cancel" class="app_button">Cancel</button>
                 </div>
             </div>
             
@@ -37,7 +37,7 @@
     <footer class="footer">
         <form action={{ url('/Logout') }} method="POST" class="bottom">
           @csrf
-         <input type="submit" value="Logout" class="logout_button">
+         <input type="submit" value="Logout" class="app_button">
       </footer>
 </html>
 

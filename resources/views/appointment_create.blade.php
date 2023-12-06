@@ -8,29 +8,38 @@
     <title>Document</title>
 </head>
 <body>
-    <form action='' method="GET">
-    @csrf
-        <label for="Doctor">Doctor</label>
-        {{-- @foreach ($doctor as $row)
-            <option value="{{$row->Doctor}}"></option>
-        @endforeach --}}
-        <label for="comment">Comment</label>
-        <input type="text">
-        <label for="Morning_med">Morning Medication</label>
-        <input type="checkbox" id="Morning_med">
-        <label for="Afternoon_med">Afternoon Medication</label>
-        <input type="checkbox" id="Afternoon_med">
-        <label for="Night_med">Night Medication</label>
-        <input type="checkbox" id="Night_med">
-        <label for="Date">Date</label>
-        <input type="date">
-
+    <form action='' method="GET" class="form center">
+        @csrf
+            
+        <div class="format">
+            <h1 class="title">Appointment Creation</h1>
+            <div class="form-input">
+                <label for="Doctor">Doctor: </label>
+                <input type="text">
+                <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="comment">Comment: </label>
+                <input type="text"> 
+            </div>
+                <div class="form-input"> 
+                    <label for="Morning_med">Morning Medication: </label>
+                    <input type="checkbox" id="Morning_med" class="checkbox">
+                    <label for="Afternoon_med">Afternoon Medication: </label>
+                    <input type="checkbox" id="Afternoon_med" class="checkbox">
+                    <label for="Night_med">Night Medication: </label>
+                    <input type="checkbox" id="Night_med" class="checkbox">
+                </div>
+                <div class="form-input">
+                    <label for="Date">Date: </label>
+                    <input type="date">   
+                </div>
+                
+        </div>
     </form>
    
 </body>
 <footer class="footer">
     <form action={{ url('/Logout') }} method="POST" class="bottom">
       @csrf
-     <input type="submit" value="Logout" class="logout_button">
+     <input type="submit" value="Logout" class="app_button">
   </footer>
 </html>

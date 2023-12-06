@@ -19,7 +19,7 @@
             @csrf
             <label> Date</label>
             <input type="date" value="date"/>
-             <input type="submit" value="Enter" >
+             <input type="submit" value="Enter" class="app_button">
 
          </form>
          <form action={{ url('/Logout') }} method="POST">
@@ -39,6 +39,6 @@
 <footer class="footer">
     <form action={{ url('/Logout') }} method="POST" class="bottom">
       @csrf
-     <input type="submit" value="Logout" class="logout_button">
+     <input type="submit" value="Logout" class="app_button">
   </footer>
 </html>

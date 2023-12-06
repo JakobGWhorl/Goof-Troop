@@ -11,31 +11,42 @@
     
 <form action={{ url('') }} method="POST" class="form">
     @csrf 
-    <div>
-        <Label for="">Role</Label>
-        <label for="">Access Level</label>
-    </div> 
     <div class="form-input">  
-        <label for=""> New Role</label>
+        <label for=""> New Role: </label>
         <input type="text" name="role">
     </div>
     <div class="form-input">
-        <label for="">Access Level</label>
+        <label for="">Access Level: </label>
         <input type="intager" name="access_level">
-    <input type="submit">
+        &nbsp;&nbsp;
+    <input type="submit" class="app_button">
     </div>
 
 </form>
+        <table class="middle roles">
+            <tr>
+                <th>Role</th>
+                <th>Access Level</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+        </table>
 
+<a href="http://127.0.0.1:8000/admin_dashboard"><button class="app_button"><span>Back</span></button></a>
 
-<a href="http://127.0.0.1:8000/admin_dashboard"><button><span>Back</span></button></a>
-
-</form>
 
 </body>
 <footer class="footer">
     <form action={{ url('/Logout') }} method="POST" class="bottom">
       @csrf
-     <input type="submit" value="Logout" class="logout_button">
+     <input type="submit" value="Logout" class="app_button">
+    </form>
   </footer>
 </html>
