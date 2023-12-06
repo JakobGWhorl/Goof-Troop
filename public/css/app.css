@@ -103,7 +103,6 @@ form>div>.title{
 .form-input>input, .form-input>select{
     width: 40mm;
     height: 5mm;
-    margin-top: 5mm;
 }
 .checkbox{
     margin-right: -10mm;
