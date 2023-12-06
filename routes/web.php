@@ -51,7 +51,7 @@ Route::get('/create/appointment', function(){
 
 
 //registration routes
-Route::get('/registration', [Application_Controller::class,'registration_form']);
+Route::get('/registration/{error?}', [Application_Controller::class,'registration_form']);
 
 //login routes
 Route::get('/login', function(){
