@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\Employee;
+use App\Models\Appointment;
 
 class Application_Controller extends Controller
 {
@@ -100,5 +102,9 @@ class Application_Controller extends Controller
     }
     function Logout(){
         return ("Your banned from new york");
+    }
+    function Registration_Approval(){
+        $employees = Employee::all();
+        return view('approve_registration', ['employees' => $employees]);
     }
 }

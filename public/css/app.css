@@ -33,6 +33,7 @@ Inside your form your layout should look like this
 .submit{
     background-color: #B8D0EB;
     margin-top: 1em;
+   
 }
 .form>div {
     color: black;
@@ -65,4 +66,8 @@ Inside your form your layout should look like this
     background-color: #B9FAF8;  
 }
 
-
+.datatable{
+    background-color: white;
+    padding: 1em;
+    margin: 1em;
+}
