@@ -55,14 +55,14 @@
                   </table>
             </div>
 
-            
-        
+
+
     </div>
 </body>
 <footer class="footer">
     <form action={{ url('/Logout') }} method="POST" class="bottom">
       @csrf
-     <input type="submit" value="Logout" class="logout_button">
+     <input type="submit2 value="Logout" class="logout_button">
   </footer>
 </html>
 <script src={{ URL::asset('js/patient_home.js'); }}></script>
