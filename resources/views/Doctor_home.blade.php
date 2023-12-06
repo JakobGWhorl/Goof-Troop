@@ -7,6 +7,9 @@
     <link rel="stylesheet" href={{ URL::asset('css/app.css'); }}>
     <link rel="stylesheet" href={{ URL::asset('css/CaregiverHome.css'); }}>
     <link rel="stylesheet" href={{ URL::asset('css/dashboard.css') }}>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css" />
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
     <title>Doctor Homepage</title>
 </head>
 <body class="bodyHP">
@@ -14,7 +17,36 @@
         <div class="header">
             <h1>Doctors Homepage</h1>
         </div>
-
+        <table id="DoctorHomeTable" class="display ">
+            <thead>
+                <tr>
+                    <th>appointmentID</th>
+                    <th>comment</th>
+                    <th>patientID</th>   
+                    <th>Doctor</th> 
+                    <th>Name</th> 
+                    <th>Morning med</th> 
+                    <th>Afternoon med</th> 
+                    <th>Night med</th>         
+                    <th>Date</th> 
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($employees as $employee)
+                <tr>
+                    <td>{{ $employee->appointmentID }}</td>
+                    <td>{{ $employee->comment }}</td>
+                    <td>{{ $employee->patientID }}</td>
+                    <td>{{ $employee->Doctor }}</td>
+                    <td>{{ $employee->Name }}</td>
+                    <td>{{ $employee->Morning_med }}</td>
+                    <td>{{ $employee->Afternoon_med }}</td>
+                    <td>{{ $employee->Night_med }}</td>
+                    <td>{{ $employee->Date }}</td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
 
 
     <div class="button-group">
@@ -35,3 +67,8 @@
         </div>
   </footer>
 <html>
+    <script>
+        let table = new DataTable('#DoctorHomeTable', {
+    
+    });
+    </script>

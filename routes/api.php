@@ -5,7 +5,9 @@ use App\Http\Controllers\Patient_Controller;
 use App\Http\Controllers\Role_Controller;
 use App\Http\Controllers\Roster_Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +28,7 @@ Route::resource('employees',Employee_Controller::class);
 Route::resource('patients',Patient_Controller::class);
 Route::resource('rosters',Roster_Controller::class);
 Route::resource('roles',Role_Controller::class);
+
 
 
 
