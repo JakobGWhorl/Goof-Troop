@@ -47,7 +47,7 @@
             <a href=""> <button class="button" style="vertical-align:middle"><span>Submit</span></button></a>
         </div>
         <div class="button-group">
-            <a href='http://127.0.0.1:8000/doctor_dashboard"> <button class="button" style="vertical-align:middle'><span>Return to Dashboard</span></button></a>
+            <a href="http://127.0.0.1:8000/doctor_dashboard"> <button class="button" style="vertical-align:middle"><span>Return to Dashboard</span></button></a>
          </div>
         </form>
 
