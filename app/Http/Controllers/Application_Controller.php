@@ -91,14 +91,16 @@ class Application_Controller extends Controller
                 
             }
             session(['dashboard'=>$dashboard]);
+            //  return session()->all();
             return redirect(session('dashboard'));
-            // return $r->session()->all();
+            
         }
         else
             return view('login',['error'=>'Incorrect Password!']);
     
     }
     function Logout(){
-        return ("Your banned from new york");
+        session()->flush();
+        return redirect('/');
     }
 }

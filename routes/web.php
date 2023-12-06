@@ -90,10 +90,12 @@ Route::get('/doctor',function(){return view('Doctor');});
 Route::get('/doctor_home',function(){return view('Doctor_home');});
 Route::get('/prescriptions',function(){return view('prescriptions');});
 Route::get('/patient_of_doctor',function(){return view('patient_of_doctor');});
-Route::get('/patients',function(){return view('patients');});
+// Route::get('/patients',function(){return view('patients');});
 Route::get('/reports',function(){return view('Admin_Report');});
 
-Route::get('/patient/home',function(){return view('patient_home');});
+Route::get('/patient/home',function(){
+    return session()->all();
+    return view('patient_home');});
 
 //doctor routes
 Route::get('/doctor',function(){return view('Doctor_Dashboard');});
