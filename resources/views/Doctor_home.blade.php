@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href={{ URL::asset('css/app.css'); }}>
+    <link rel="stylesheet" href={{ URL::asset('css/dashboard.css'); }}>
     <link rel="stylesheet" href={{ URL::asset('css/CaregiverHome.css'); }}>
     <link rel="stylesheet" href={{ URL::asset('css/dashboard.css') }}>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
@@ -50,8 +51,8 @@
 
 
     <div class="button-group">
-        <div> <a href="http://127.0.0.1:8000/Patients"> <button class="button" style="vertical-align:middle"><span>Patient List</span></button></a></div>
-       
+        <a href="http://127.0.0.1:8000/patients"> <button class="button" style="vertical-align:middle"><span>Patient List</span></button></a>
+        <a href="http://127.0.0.1:8000/doctor_dashboard"> <button class="button" style="vertical-align:middle"><span>Return to Dashboard</span></button></a>
     </div>
 
 </body>
@@ -61,7 +62,7 @@
         <form action={{ url('/Logout') }} method="POST" >
             @csrf
             <input type="submit" value="Logout" class="logout_button">
-            
+
           </form>
           <a href="http://127.0.0.1:8000/doctor"> <button class="back_button" style="vertical-align:middle"><span>Back</span></button></a>
         </div>

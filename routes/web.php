@@ -94,7 +94,7 @@ Route::get('/patient_of_doctor',function(){return view('patient_of_doctor');});
 Route::get('/patients',function(){return view('patients');});
 Route::get('/reports',function(){return view('Admin_Report');});
 
-Route::get('/patient/home',function(){return view('patient_home');});
+Route::get('/patient_home',function(){return view('patient_home');});
 
 //doctor routes
-Route::get('/doctor',function(){return view('Doctor_Dashboard');});
+Route::get('/doctor_dashboard',function(){return view('doctor_dashboard');});
