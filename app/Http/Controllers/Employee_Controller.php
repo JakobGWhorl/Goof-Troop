@@ -3,16 +3,22 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Models\Employee;
+
 
 class Employee_Controller extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request )
     {
-        //
+        
+        $employees = Employee::all();
+        return view('Employees', ['employees' => $employees]);
+        
+    
     }
 
     /**

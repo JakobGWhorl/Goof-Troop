@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Appointment_Controller;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
@@ -79,15 +80,15 @@ Route::get('/roster_view',function(){return view('Roster_View');});
 
 Route::get('/admins_report',function(){return view('Admin_Report');});
 
-Route::get('/employees',function(){return view('Employees');});
+// Route::get('/employees',function(){return view('Employees');});
 //admin routes
 Route::get('/admin',function(){return view('Admin_Dashboard');});
-Route::get('/registration_approval',function(){return view('Approve_Registration');});
+Route::get('/registration_approval', [Application_Controller::class,'registration_approval']);
 Route::get('/doctors_appointment',function(){return view('Doctors_Appointments');});
 Route::get('/payment_view',function(){return view('payments_view');});
 Route::get('/reports',function(){return view('admin_reports');});
 Route::get('/doctor',function(){return view('Doctor');});
-Route::get('/doctor_home',function(){return view('Doctor_home');});
+Route::get('/doctor_home', [Appointment_Controller::class,'DoctorsHomeTable']);
 Route::get('/prescriptions',function(){return view('prescriptions');});
 Route::get('/patient_of_doctor',function(){return view('patient_of_doctor');});
 Route::get('/patients',function(){return view('patients');});

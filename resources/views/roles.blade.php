@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<<<<<<< HEAD
+
 <form action={{ url('') }} method="POST" class="form">
     @csrf
     <div>
