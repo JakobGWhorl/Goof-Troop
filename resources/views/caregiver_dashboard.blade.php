@@ -16,15 +16,18 @@
 
         <div class="button-group">
             <a href=""> <button class="button" ><span>Patients</span></button></a>
-            <a href="http://127.0.0.1:8000/CaregiverHome"><button class="button" ><span>Home</span></button></a>
-            <a href="http://127.0.0.1:8000/RosterView"><button class="button" ><span>Roster</span></button></a>
+            <a href="http://127.0.0.1:8000/caregiver_home"><button class="button" ><span>Home</span></button></a>
+            <a href="http://127.0.0.1:8000/roster_view"><button class="button" ><span>Roster</span></button></a>
         </div>
       
     </div>
 </body>
 <footer class="footer">
     <form action={{ url('/Logout') }} method="POST" class="bottom">
-      @csrf
-     <input type="submit" value="Logout" class="app_button">
+        @csrf
+        <input type="submit" value="Logout" class="app_button">
+      </form>
+       
+      
   </footer>
 </html>

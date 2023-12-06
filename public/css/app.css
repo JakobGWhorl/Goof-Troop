@@ -110,11 +110,14 @@ form>div>.title{
     margin-left: -15mm;
     
 }
-.error {
+.error {    
     text-align: center;
     color: #FF0035;
     font-weight: bold;
-    margin-top: 1em;
+    width:15em;
+    margin:auto;
+    margin-top: 1em;  
+    background-color: #B9FAF8;  
 }
 
 .app_button{
@@ -153,4 +156,8 @@ html{
     100% {
       transform:translateX(25%);
     }
-  }
+  }.datatable{
+    background-color: white;
+    padding: 1em;
+    margin: 1em;
+}

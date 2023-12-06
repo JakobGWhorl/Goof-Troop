@@ -38,8 +38,13 @@
                 
             <form action={{ url('/Logout') }} method="POST">
                 @csrf
-               <input type="submit" value="Logout" class="logout">
+               <input type="submit" value="Logout" class="app_button">
+            </form>
         </div>
     </form>
+    <div style="width:12em;margin:auto;">
+        <a style='' href="{{ url('/registration') }}"><button>Don't have an account? Register here!</button></a>
+
+    </div>
 </body>
 </html>

@@ -5,14 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Registration_Employee extends Model
+class payment extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'employee_id',
-        'first_name',
-        'last_name',
-        'role',
-        'approved'
+        'patient_id',
+        'total_due'
     ];
 }

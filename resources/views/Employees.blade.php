@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href={{ URL::asset('css/app.css') }}>
     <link rel="stylesheet" href={{ URL::asset('css/Employees.css') }}>
+    <link rel="stylesheet" href={{ URL::asset('css/dashboard.css'); }}>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css" />
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
+   
+
+   
+
     <title>Employees</title>
 </head>
 <body class="bodyHP">
@@ -14,55 +23,59 @@
             <h1>Employees</h1>
         </div>
 
-        <div class="header">
-         <form action="Get" class="form">
-            @csrf
-            <div class="form-input">
-                <label> ID</label>
-                <input type="integer" />
-                <label> First Name</label>
-                <input type="text" />
-
-                <label> Last Name</label>
-                <input type="text" />
-
-                <label> Role</label>
-                <input type="text" />
-
-                <label> Email</label>
-                <input type="text" />
-
-                <label> Phone</label>
-                <input type="text" />
-                
-                <label> Password</label>
-                <input type="text" />
-                
-                <label> DOB</label>
-                <input type="text" />
-                
-                <label> Salary</label>
-                <input type="integer" /><br>
-                <input type="submit" value="Search" >
-            </div>
-
-
-         </form>
         
         </div>
-        <div class="middle">
-            <h3>Employee List</h3>
-        </div>
-        <div class="button">
-            
-            <a href="http://127.0.0.1:8000/Supervisor"> <button class="button1" style="vertical-align:middle"><span>Back To Dashboard</span></button></a>
-         </div>
+        
+        
          
     </div>
+    
+<div class='datatable'>
+<table id="EmployeesTable" class="display ">
+    <thead>
+        <tr>
+            <th>Employee ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>   
+            <th>Role</th> 
+            <th>Email</th> 
+            <th>Phone</th> 
+            <th>Password</th> 
+            <th>DOB</th>         
+            <th>Salary</th> 
+        </tr>
+    </thead>
+    <tbody>
+        @foreach ($employees as $employee)
+        <tr>
+            <td>{{ $employee->employee_id }}</td>
+            <td>{{ $employee->first_name }}</td>
+            <td>{{ $employee->last_name }}</td>
+            <td>{{ $employee->role }}</td>
+            <td>{{ $employee->email }}</td>
+            <td>{{ $employee->phone }}</td>
+            <td>{{ $employee->password }}</td>
+            <td>{{ $employee->dob }}</td>
+            <td>{{ $employee->salary }}</td>
+        </tr>
+        @endforeach
+    </tbody>
+</table>
+</div>
 </body>
 <footer class="footer">
-    <form action={{ url('/Logout') }} method="POST" class="bottom">
-      @csrf
-     <input type="submit" value="Logout" class="app_button">
-  </footer>
+    <div class="bottom">
+        <form action={{ url('/Logout') }} method="POST" >
+            @csrf
+            <input type="submit" value="Logout" class="app_button">
+            
+          </form>
+          <a href={{ session('dasboard') }}> <button class="back_button" style="vertical-align:middle"><span>Back</span></button></a>
+        </div>
+</footer>
 </html>
+<script>
+    let table = new DataTable('#EmployeesTable', {
+
+});
+</script>
