@@ -19,7 +19,7 @@
           <div> <a href="{{url('/doctor_home')}}"><button class="button" ><span>Home</span></button></a></div>
           <div><a href="{{url('/prescriptions')}}"><button class="button" ><span>Prescriptions</span></button></a></div>
         </div>
-    
+
     </div>
 </body>
 <footer class="footer">
@@ -27,7 +27,7 @@
         @csrf
         <input type="submit" value="Logout" class="app_button">
       </form>
-       
-       
+
+
   </footer>
 </html>

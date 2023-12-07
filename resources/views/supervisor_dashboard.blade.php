@@ -17,8 +17,8 @@
     <div class="button-group">
       <div> <a href=""> <button class="button"><span>Patient<br> Information</span></button></a></div>
       <div> <a href="{{url('/doctors_appointment')}}"><button class="button"><span>Appointments</span></button></a></div>
-      <div><a href="{{url('/employees')}}"><button class="button"><span>Employees</span></button></a></div>
-      <div> <a href=""> <button class="button"><span>Patients</span></button></a></div>
+      <div><a href="{{url('/api/employees')}}"><button class="button"><span>Employees</span></button></a></div>
+      <div> <a href="{{ url('/api/patients') }}"> <button class="button"><span>Patients</span></button></a></div>
     </div>
 
     <div class="button-group row2">

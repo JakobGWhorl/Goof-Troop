@@ -60,7 +60,13 @@
                 <td>{{ $employee->password }}</td>
                 <td>{{ $employee->dob }}</td>
                 <td>{{ $employee->salary }}</td>
-                <td><button>Approve</button></td>
+                <td>
+                    <form action="{{ url('/approved_employee') }}" method="POST">
+                        @csrf
+                        <input type="hidden" name="id" value="{{ $employee->employee_id }}">
+                        <input type="submit" value="Approve">
+                    </form>               
+                </td>
             </tr>
             @endforeach
         </tbody>
