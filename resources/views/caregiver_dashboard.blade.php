@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href={{ URL::asset('css/app.css'); }}>
+    <link rel="stylesheet" href={{ URL::asset('css/app.css') }}>
     <link rel="stylesheet" href={{ URL::asset('css/dashboard.css') }}>
     <title>CareGiver Dashboard</title>
 </head>
@@ -16,8 +16,8 @@
 
         <div class="button-group">
             <a href="{{ url('/api/patients') }}"> <button class="button" ><span>Patients</span></button></a>
-            <a href="http://127.0.0.1:8000/caregiver_home"><button class="button" ><span>Home</span></button></a>
-            <a href="http://127.0.0.1:8000/roster_view"><button class="button" ><span>Roster</span></button></a>
+            <a href="{{url('/caregiver_home')}}"><button class="button" ><span>Home</span></button></a>
+            <a href="{{url('/roster_view')}}"><button class="button" ><span>Roster</span></button></a>
         </div>
       
     </div>
@@ -25,7 +25,7 @@
 <footer class="footer">
     <form action={{ url('/Logout') }} method="POST" class="bottom">
         @csrf
-        <input type="submit" value="Logout" class="logout_button">
+        <input type="submit" value="Logout" class="app_button">
       </form>
        
       

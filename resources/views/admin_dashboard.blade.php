@@ -8,13 +8,12 @@
     <link rel="stylesheet" href={{ URL::asset('css/dashboard.css') }}>
     <title>Admin Dashboard</title>
 </head>
-<body>
-    <div class="content">
-        <div class="header"> 
-            <h1>Admin Dashboard</h1>
-        </div>
-        
+<body> 
     
+    <div class="header"> 
+        <h1>Admin Dashboard</h1>
+        </div>
+    <div class="content">
         <div class="button-group">
             <a href="http://127.0.0.1:8000/registration_approval"><button class="button"><span>Registration Approval</span></button></a>
             <a href="http://127.0.0.1:8000/doctors_appointment"><button class="button"><span>Doctors Appointment</span></button></a>
@@ -25,8 +24,6 @@
             <a href="http://127.0.0.1:8000/roles"><button class="button"><span>Roles</span></button></a>
         </div>
    </div> 
-   
-</form>
 </body>
 <footer class="footer">
     <form action={{ url('/Logout') }} method="POST" class="bottom">

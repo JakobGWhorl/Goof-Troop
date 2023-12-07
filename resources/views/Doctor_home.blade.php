@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href={{ URL::asset('css/app.css'); }}>
-    <link rel="stylesheet" href={{ URL::asset('css/dashboard.css'); }}>
-    <link rel="stylesheet" href={{ URL::asset('css/CaregiverHome.css'); }}>
     <link rel="stylesheet" href={{ URL::asset('css/dashboard.css') }}>
+    <link rel="stylesheet" href={{ URL::asset('css/CaregiverHome.css'); }}>
+   
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css" />
     <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
@@ -51,7 +51,7 @@
 
 
     <div class="button-group">
-        <a href="http://127.0.0.1:8000/patients"> <button class="button" style="vertical-align:middle"><span>Patient List</span></button></a>
+        <a href="{{url('/patients')}}"> <button class="button" style="vertical-align:middle"><span>Patient List</span></button></a>
         <a href="http://127.0.0.1:8000/doctor_dashboard"> <button class="button" style="vertical-align:middle"><span>Return to Dashboard</span></button></a>
     </div>
 
@@ -64,7 +64,7 @@
             <input type="submit" value="Logout" class="logout_button">
 
           </form>
-          <a href="http://127.0.0.1:8000/doctor"> <button class="back_button" style="vertical-align:middle"><span>Back</span></button></a>
+          <a href="{{ session('dashboard') }}"> <button class="back_button" style="vertical-align:middle"><span>Back</span></button></a>
         </div>
   </footer>
 <html>
