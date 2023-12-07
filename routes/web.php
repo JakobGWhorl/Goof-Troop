@@ -12,6 +12,7 @@ use App\Http\Controllers\Employee_Controller;
 use App\Http\Controllers\Registration_Employee_Controller;
 use App\Http\Controllers\Role_Controller;
 use App\Http\Controllers\Roster_Controller;
+use App\Http\Controllers\Patient_Controller;
 
 
 /*
@@ -223,5 +224,7 @@ Route::get('/create/roles', function(){
     }
     return view('Roles');
 });
+
+Route::post('/patientSearch', [Patient_Controller::class, 'getPatientName'])->name('patientSearch');
 
 
