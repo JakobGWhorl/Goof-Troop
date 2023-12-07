@@ -18,8 +18,8 @@
             </div>
             <div class="button">
                 <div> <a href=""> <button class="button1" style="vertical-align:middle"><span>Old Prescription</span></button></a></div>
-                <div> <a href="http://127.0.0.1:8000/patients"><button class="button1" style="vertical-align:middle"><span>Back to Patients</span></button></a></div>
-                <div><a href="http://127.0.0.1:8000/prescriptions"><button class="button1" style="vertical-align:middle"><span>Patients Perscriptions</span></button></a></div>
+                <div> <a href="{{url('/patients')}}"><button class="button1" style="vertical-align:middle"><span>Back to Patients</span></button></a></div>
+                <div><a href="{{url('/prescriptions')}}"><button class="button1" style="vertical-align:middle"><span>Patients Perscriptions</span></button></a></div>
               </div>
 
 

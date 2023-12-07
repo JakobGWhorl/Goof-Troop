@@ -15,9 +15,9 @@
         </div>
 
         <div class="button-group">
-          <div> <a href="http://127.0.0.1:8000/patients"> <button class="button" ><span>Patients</span></button></a></div>
-          <div> <a href="http://127.0.0.1:8000/doctor_home"><button class="button" ><span>Home</span></button></a></div>
-          <div><a href="http://127.0.0.1:8000/prescriptions"><button class="button" ><span>Prescriptions</span></button></a></div>
+          <div> <a href="{{url('/patients')}}"> <button class="button" ><span>Patients</span></button></a></div>
+          <div> <a href="{{url('/doctor_home')}}"><button class="button" ><span>Home</span></button></a></div>
+          <div><a href="{{url('/prescriptions')}}"><button class="button" ><span>Prescriptions</span></button></a></div>
         </div>
     
     </div>

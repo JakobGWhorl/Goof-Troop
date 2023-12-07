@@ -50,7 +50,7 @@
 
 
     <div class="button-group">
-        <div> <a href="http://127.0.0.1:8000/Patients"> <button class="button" style="vertical-align:middle"><span>Patient List</span></button></a></div>
+        <div> <a href="{{url('/Patients')}}"> <button class="button" style="vertical-align:middle"><span>Patient List</span></button></a></div>
        
     </div>
 
