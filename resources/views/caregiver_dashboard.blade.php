@@ -15,7 +15,7 @@
         </div>
 
         <div class="button-group">
-            <a href=""> <button class="button" ><span>Patients</span></button></a>
+            <a href="{{ url('/api/patients') }}"> <button class="button" ><span>Patients</span></button></a>
             <a href="http://127.0.0.1:8000/caregiver_home"><button class="button" ><span>Home</span></button></a>
             <a href="http://127.0.0.1:8000/roster_view"><button class="button" ><span>Roster</span></button></a>
         </div>

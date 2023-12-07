@@ -13,12 +13,6 @@
         <div class="header">
             <h1>Caregiver's Home</h1>
         </div>
-
-
-        <div class="button-group">
-          <div> <a href=""> <button class="button" style="vertical-align:middle"><span>List of Patients</span></button></a></div>
-         </div>
-
     </div>
 </body>
 <footer class="footer">

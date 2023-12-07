@@ -33,17 +33,17 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($employees as $employee)
+                @foreach ($appointments as $appointment)
                 <tr>
-                    <td>{{ $employee->appointmentID }}</td>
-                    <td>{{ $employee->comment }}</td>
-                    <td>{{ $employee->patientID }}</td>
-                    <td>{{ $employee->Doctor }}</td>
-                    <td>{{ $employee->Name }}</td>
-                    <td>{{ $employee->Morning_med }}</td>
-                    <td>{{ $employee->Afternoon_med }}</td>
-                    <td>{{ $employee->Night_med }}</td>
-                    <td>{{ $employee->Date }}</td>
+                    <td>{{ $appointment->appointmentID }}</td>
+                    <td>{{ $appointment->comment }}</td>
+                    <td>{{ $appointment->patientID }}</td>
+                    <td>{{ $appointment->Doctor }}</td>
+                    <td>{{ $appointment->Name }}</td>
+                    <td>{{ $appointment->Morning_med }}</td>
+                    <td>{{ $appointment->Afternoon_med }}</td>
+                    <td>{{ $appointment->Night_med }}</td>
+                    <td>{{ $appointment->Date }}</td>
                 </tr>
                 @endforeach
             </tbody>
