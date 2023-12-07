@@ -15,13 +15,13 @@
         </div>
 
         <div class="button">
-            <form action="Get">
+            <form method="POST" action="{{ url('/patientSearch') }}" id="patientForm">
                 @csrf
                 <label> Patient ID</label>
-                <input type="integer" />
+                <input type="number" name="patientID" id="patientID" onkeyup="findPatientName()" value="{{ empty($data) ? '' : $data->patient_id }}" />
                 <br>
                 <label> Patient Name</label>
-                <input type="text" />
+                <input type="text" name="patientName" id="patientID" value="{{ empty($data) ? '' : $data->first_name }}" />
                 <br>
                 <label> Date</label>
                 <input type="date" id="theDate"  />
@@ -58,6 +58,16 @@
 
 
     </div>
+
+    <script>
+      function findPatientName() {
+            var patientID = document.querySelector('#patientID').value;
+
+            if (patientID.length === 1) {
+                document.getElementById('patientForm').submit();
+            }
+        }
+    </script>
 </body>
 <footer class="footer">
     <div class="bottom">
