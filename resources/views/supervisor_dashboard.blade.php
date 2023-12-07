@@ -17,8 +17,8 @@
     <div class="button-group">
       <div> <a href=""> <button class="button"><span>Patient<br> Information</span></button></a></div>
       <div> <a href="http://127.0.0.1:8000/doctors_appointment"><button class="button"><span>Appointments</span></button></a></div>
-      <div><a href="http://127.0.0.1:8000/employees"><button class="button"><span>Employees</span></button></a></div>
-      <div> <a href=""> <button class="button"><span>Patients</span></button></a></div>
+      <div><a href="http://127.0.0.1:8000/api/employees"><button class="button"><span>Employees</span></button></a></div>
+      <div> <a href="{{ url('/api/patients') }}"> <button class="button"><span>Patients</span></button></a></div>
     </div>
 
     <div class="button-group row2">

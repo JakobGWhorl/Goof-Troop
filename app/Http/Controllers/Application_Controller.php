@@ -101,12 +101,31 @@ class Application_Controller extends Controller
             return view('login',['error'=>'Incorrect Password!']);
     
     }
+
     function Logout(){
         session()->flush();
         return redirect('/');
     }
+
+    
     function Registration_Approval(){
-        $employees = Employee::all();
+
+        //check if logged in
+        if(session('id')==null)
+            return redirect('login');
+        //check access
+        if(session('access')!=5 && session('access')!=4){
+            return redirect(session('dashboard'));
+        }
+        
+
+        $employees = DB::table('employees')->select()->where('approved','=',false)->get();
         return view('approve_registration', ['employees' => $employees]);
+    }
+
+    function approved_employee(Request $r){
+        $id = $r->id;
+        $employee = DB::table('employees')->where('employee_id','=',$id)->update(['approved'=>true]);
+        return redirect('/registration_approval/');
     }
 }

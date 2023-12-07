@@ -13,15 +13,11 @@ class Patient_Controller extends Controller
      */
     public function index()
     {
-        // return session('id');
-        // return session('access');
-        // return session()->all();
-
         //check if logged in
         if(session('id')==null)
             return redirect('login');
         //check access
-        if(session('access')!=5 && session('access')!=4){
+        if(session('access')!=5 && session('access')!=4 && session('access')!=2){
             return redirect(session('dashboard'));
         }
         return view('patients');

@@ -15,9 +15,7 @@
         </div>
 
 
-        <div class="button-group">
-          <div> <a href=""> <button class="button" style="vertical-align:middle"><span>List of Patients</span></button></a></div>
-         </div>
+        
         
     </div>
 </body>
