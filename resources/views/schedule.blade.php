@@ -43,7 +43,7 @@
             <input type="submit" value="Logout" class="logout_button">
             
           </form>
-          <a href="http://127.0.0.1:8000/caregiver"> <button class="back_button" style="vertical-align:middle"><span>Back</span></button></a>
+          <a href="{{ session('dashboard') }}"> <button class="back_button" style="vertical-align:middle"><span>Back</span></button></a>
         </div>
   </footer>
 </html>
