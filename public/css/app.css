@@ -23,17 +23,17 @@ body {
     width: 100%;
 }
 tr{
-    border-style:solid ;
+    border-bottom-style:solid ;
 }
 th{
     background-color: #B9FAF8;
-    border-style:solid ;
+    border-bottom-style:solid ;
     height: 20mm;
     font-size: 30px;
 }
 td{
     background-color: white;
-    border-style: solid;
+    border-bottom-style: solid;
     height: 10mm;
 }
 /* 

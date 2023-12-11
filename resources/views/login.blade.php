@@ -33,13 +33,6 @@
                     {{ $error }}
                 @endisset
             </div>
-                
-            
-                
-            <form action={{ url('/Logout') }} method="POST">
-                @csrf
-               <input type="submit" value="Logout" class="app_button">
-            </form>
         </div>
     </form>
 </body>
