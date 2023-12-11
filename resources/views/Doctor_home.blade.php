@@ -32,7 +32,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($employees as $employee)
+                @foreach ($appointments as $employee)
                 <tr>
                     <td>{{ $employee->appointmentID }}</td>
                     <td>{{ $employee->comment }}</td>

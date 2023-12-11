@@ -13,7 +13,6 @@
         <div class="header">
             <h1>Majima's Retirement Home</h1>
         </div>
-
         <div class="button">
             <a href="http://127.0.0.1:8000/login"> <button class="button1" style="vertical-align:middle"><span>Login</span></button></a>
             <a href="http://127.0.0.1:8000/registration"><button class="button1" style="vertical-align:middle"><span>Register</span></button></a>

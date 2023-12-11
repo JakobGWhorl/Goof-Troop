@@ -18,38 +18,42 @@
             <h1>Roster View</h1>
         </div>
 
-         <form action="Get" class="form">
-            @csrf
-            <div class="form-input">
-                <label> Date</label>
-                <input type="date" value="date"/>
-                <input type="submit" value="Enter" >
-            </div>
-            
-
-         </form>
+         
          
 
     </div>
 </body>
-<table id="RosterTable" class="display">
+<div class='datatable'>
+<table id="RosterTable" class="display ">
     <thead>
         <tr>
-            <th>Column 1</th>
-            <th>Column 2</th>
+            <th>Roster ID</th>
+            <th>Date</th>
+            <th>Supervisor</th>   
+            <th>Doctor</th> 
+            <th>caregiver1</th> 
+            <th>caregiver2</th> 
+            <th>caregiver3</th> 
+            <th>caregiver4</th>         
+          
         </tr>
     </thead>
     <tbody>
+        @foreach ($rosters as $employee)
         <tr>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
+            <td>{{ $employee->roster_id }}</td>
+            <td>{{ $employee->date }}</td>
+            <td>{{ $employee->supervisor }}</td>
+            <td>{{ $employee->doctor}}</td>
+            <td>{{ $employee->caregiver1 }}</td>
+            <td>{{ $employee->caregiver2 }}</td>
+            <td>{{ $employee->caregiver3 }}</td>
+            <td>{{ $employee->caregiver4 }}</td>
         </tr>
-        <tr>
-            <td>Row 2 Data 1</td>
-            <td>Row 2 Data 2</td>
-        </tr>
+        @endforeach
     </tbody>
 </table>
+</div>
 <footer class="footer">
     <div class="bottom">
         <form action={{ url('/Logout') }} method="POST" >
