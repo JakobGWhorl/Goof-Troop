@@ -5,6 +5,7 @@ use App\Http\Controllers\Employee_Controller;
 use App\Http\Controllers\Patient_Controller;
 use App\Http\Controllers\Role_Controller;
 use App\Http\Controllers\Roster_Controller;
+use App\Http\Controllers\Appointment_ApiController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
