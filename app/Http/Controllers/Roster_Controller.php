@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\Roster;
 
@@ -11,9 +12,11 @@ class Roster_Controller extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $employees = Roster::all();
+        return view('roster_view', ['rosters' => $employees]);
+        
     }
 
     /**
