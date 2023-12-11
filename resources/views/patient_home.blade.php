@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href={{ URL::asset('css/app.css'); }}>
-    <link rel="stylesheet" href={{ URL::asset('css/patient_home.css'); }}>
+    <link rel="stylesheet" href={{ URL::asset('css/app.css') }}>
+    <link rel="stylesheet" href={{ URL::asset('css/patient_home.css') }}>
     <title>Patient Home</title>
 </head>
 <body class="bodyHP">
@@ -15,13 +15,13 @@
         </div>
 
         <div class="button">
-            <form action="Get">
+            <form method="POST" action="{{ url('/patientSearch') }}" id="patientForm">
                 @csrf
                 <label> Patient ID</label>
-                <input type="integer" />
+                <input type="number" name="patientID" id="patientID" onkeyup="findPatientName()" value="{{ empty($data) ? '' : $data->patient_id }}" />
                 <br>
                 <label> Patient Name</label>
-                <input type="text" />
+                <input type="text" name="patientName" id="patientID" value="{{ empty($data) ? '' : $data->first_name }}" />
                 <br>
                 <label> Date</label>
                 <input type="date" id="theDate"  />
@@ -55,19 +55,29 @@
                   </table>
             </div>
 
-            
-        
+
+
     </div>
+
+    <script>
+      function findPatientName() {
+            var patientID = document.querySelector('#patientID').value;
+
+            if (patientID.length === 1) {
+                document.getElementById('patientForm').submit();
+            }
+        }
+    </script>
 </body>
 <footer class="footer">
     <div class="bottom">
         <form action={{ url('/Logout') }} method="POST" >
             @csrf
-            <input type="submit" value="Logout" class="logout_button">
-            
+            <input type="submit2 value="Logout" class="logout_button">
+
           </form>
-          <a href="http://127.0.0.1:8000/caregiver"> <button class="back_button" style="vertical-align:middle"><span>Back</span></button></a>
+          <a href="{{ session('dashboard') }}"> <button class="back_button" style="vertical-align:middle"><span>Back</span></button></a>
         </div>
   </footer>
 </html>
-<script src={{ URL::asset('js/patient_home.js'); }}></script>
+<script src={{ URL::asset('js/patient_home.js') }}></script>

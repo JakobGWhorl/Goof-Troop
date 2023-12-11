@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href={{ URL::asset('css/app.css') }}>
     <link rel="stylesheet" href={{ URL::asset('css/Employees.css') }}>
-    <link rel="stylesheet" href={{ URL::asset('css/dashboard.css'); }}>
+    <link rel="stylesheet" href={{ URL::asset('css/dashboard.css') }}>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css" />
     <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
@@ -67,7 +67,7 @@
     <div class="bottom">
         <form action={{ url('/Logout') }} method="POST" >
             @csrf
-            <input type="submit" value="Logout" class="logout_button">
+            <input type="submit" value="Logout" class="app_button">
             
           </form>
           <a href={{ session('dasboard') }}> <button class="back_button" style="vertical-align:middle"><span>Back</span></button></a>

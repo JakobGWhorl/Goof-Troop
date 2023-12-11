@@ -6,24 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>New Employee Registration</title>
     {{-- Link to css --}}
-    <link rel="stylesheet" href={{ URL::asset('css/app.css'); }}>    
+    <link rel="stylesheet" href={{ URL::asset('css/app.css') }}>    
 </head>
 <body>
-    <form class='form' method="POST" action="{{ url('/login') }}">
+    <div class="background"></div>
+    <div class="background animation"></div>
+    <div class="background animation2"></div>
+    <form class='form center' method="POST" action="{{ url('/login') }}">
         @csrf
         <div>
-            <h1>Login</h1>
-            <div class='form-input'>
-                <label for="email">Email:</label>
-                <input type="text" name="email" id="email_field">
-            </div>
-            <div class='form-input'>
-                <label for="password">Password:</label>
-                <input type="password" name="password" id="password_field">
-                <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-            </div>
+            <h1 class="title">Login</h1>
+            <div class="input">
+                <div class='form-input'>
+                    <label for="email">Email:</label>
+                    <input type="text" name="email" id="email_field">
+                </div>
+                <div class='form-input password'>
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password_field">
+                </div>
+            </div>    
             <input class='submit' type="submit" value="Submit">
-            <a href="{{ url('/registration') }}"><button class = 'submit'>Don't have an account? Register here!</button></a>
+            <a href="{{ url('/registration') }}"><button class = 'registration'>Don't have an account? Register here!</button></a>
             <div class='error'>
                 @isset($error)
                     {{ $error }}
@@ -32,7 +36,10 @@
                 
             
                 
-          
+            <form action={{ url('/Logout') }} method="POST">
+                @csrf
+               <input type="submit" value="Logout" class="app_button">
+            </form>
         </div>
     </form>
 </body>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="stylesheet" href={{ URL::asset('css/app.css'); }}>
-    <link rel="stylesheet" href={{ URL::asset('css/dashboard.css'); }}>
+    <link rel="stylesheet" href={{ URL::asset('css/app.css') }}>
+    <link rel="stylesheet" href={{ URL::asset('css/dashboard.css') }}>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css" />
     <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
@@ -12,12 +12,23 @@
     <title>Registration Approval</title>
 </head>
 <body>
-    <div class="enter">
-        <div class="header">
-            <h1>Registration Approval</h1>
-        </div>
-
-        
+    <form action={{ url("") }} method="POST" class="form">
+        @csrf
+        <div class="format">
+            <h1 class="title">Registration Approval</h1>
+            <div class="form-input">
+                <Label>Name</Label>
+                <label for="">Role</label>
+                <label for="yes">Yes</label>
+                <input type="checkbox" name="yes" class="checkbox">
+                <label for="no">No</label>
+                <input type="checkbox" name="no" class="checkbox">
+            </div>
+            
+            <div class="form-input">
+                <button id="ok" class="appbutton">Ok</button>
+                <button id="cancel" class="appbutton">Cancel</button>
+            </div>
         </div>
         
     <div class="datatable">
@@ -49,7 +60,13 @@
                 <td>{{ $employee->password }}</td>
                 <td>{{ $employee->dob }}</td>
                 <td>{{ $employee->salary }}</td>
-                <td><button>Approve</button></td>
+                <td>
+                    <form action="{{ url('/approved_employee') }}" method="POST">
+                        @csrf
+                        <input type="hidden" name="id" value="{{ $employee->employee_id }}">
+                        <input type="submit" value="Approve">
+                    </form>               
+                </td>
             </tr>
             @endforeach
         </tbody>
@@ -58,15 +75,10 @@
    
     
 </body>
-
-<footer class="footer">    
-    <div class="button">
-        <form action={{ url('/Logout') }} method="POST" class="bottom">
-            @csrf
-              <input type="submit" value="Logout" class="logout_button">
-        </form>
-        <a href="{{ session('dashboard') }}"> <button class="button1" style="vertical-align:middle"><span>Back To Dashboard</span></button></a>
-    </div>
+<footer class="footer">
+    <form action={{ url('/Logout') }} method="POST" class="bottom">
+      @csrf
+     <input type="submit" value="Logout" class="logout_button">
   </footer>
 </html>
 <script>

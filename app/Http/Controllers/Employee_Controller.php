@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\Employee;
 
 
+
 class Employee_Controller extends Controller
 {
     /**
@@ -41,6 +42,11 @@ class Employee_Controller extends Controller
          //[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$
          if(preg_match("/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/",$email)==0)
              return redirect('registration/Invalid email format. Please format as "email@provider.com"/');
+
+        //check that the email is not used in either the patient or the employee table already
+        if(DB::table('employees')->select('email')->where('email','=',$email)->get()!='[]' || DB::table('patients')->select('email')->where('email','=',$email)->get()!='[]' ){
+            return redirect('registration/This email is already in use/');
+        }
          
          //check phone pattern
          $phone = $request->phone;

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Appointment_Controller;
 use App\Http\Controllers\Employee_Controller;
 use App\Http\Controllers\Patient_Controller;
 use App\Http\Controllers\Role_Controller;
@@ -29,7 +30,7 @@ Route::resource('employees',Employee_Controller::class);
 Route::resource('patients',Patient_Controller::class);
 Route::resource('rosters',Roster_Controller::class);
 Route::resource('roles',Role_Controller::class);
-Route::resource('appointments',Appointment_ApiController::class);
+Route::resource('appointments',Appointment_Controller::class);
 
 
 

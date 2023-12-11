@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Patient;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 
 class Patient_Controller extends Controller
 {
@@ -12,7 +14,14 @@ class Patient_Controller extends Controller
      */
     public function index()
     {
-        //
+        //check if logged in
+        if(session('id')==null)
+            return redirect('login');
+        //check access
+        if(session('access')!=5 && session('access')!=4 && session('access')!=2){
+            return redirect(session('dashboard'));
+        }
+        return view('patients');
     }
 
     /**
@@ -37,6 +46,10 @@ class Patient_Controller extends Controller
         if(preg_match("/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/",$email)==0)
             return redirect('registration/Invalid email format. Please format as "email@provider.com"/');
         
+        //check that the email is not used in either the patient or the employee table already
+        if(DB::table('employees')->select('email')->where('email','=',$email)->get()!='[]' || DB::table('patients')->select('email')->where('email','=',$email)->get()!='[]' ){
+            return redirect('registration/This email is already in use/');
+        }
         //check phone pattern
         $phone = $r->phone_number;
         //[0-9]{3}-[0-9]{3}-[0-9]{4}
@@ -75,5 +88,15 @@ class Patient_Controller extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+    public function getPatientName(Request $request)
+    {
+        $patient_id = $request->patientID;
+
+        $patient = DB::select('select * from patients where patient_id = ?', [$patient_id]);
+
+        return view('patient_home', ['data'=>$patient[0]]);
+        
     }
 }
