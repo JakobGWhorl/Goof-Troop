@@ -1,0 +1,232 @@
+.header {
+    display: flex;
+    justify-content: center;
+    font-family: Garamond, serif;
+    font-size:1.5rem;
+    background-color: #3498db;
+    color: white;
+    padding: 10px;
+    margin: 1em;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to right, #52489C, #B9FAF8);
+}
+
+.button-group{
+    display: flex;
+    padding-right: 20px;
+    justify-content: center;
+}
+
+.row2{
+    display: flex;
+    padding-top: 3em;
+    padding-left: 1em;
+
+}
+
+.button {
+    display: inline-block;
+    border-radius: 100px;
+    background-color: #B9FAF8;
+    border: none;
+    color:black;
+    text-align: center;
+    font-size: 28px;
+    padding: 10px;
+    width: 10em;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    height: 4em;
+    justify-content: center;
+    margin-left: 25px ;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+
+
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 1s;
+    color: white;
+}
+
+.button:hover{
+    background:linear-gradient( #52489C,#B298DC);
+}
+
+.button:hover span {
+    padding-right: 25px;
+    color: white;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.content{
+    margin-bottom:19.6%;
+
+}
+
+.logout_button{
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #B9FAF8;
+    border: none;
+    color:black;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 5em;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    height: 2em;
+    margin-bottom: 1em;
+}
+
+.logout_button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+
+
+}
+
+.logout_button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 1s;
+    color: white;
+}
+
+.logout_button:hover{
+    background:linear-gradient( #52489C,#B298DC);
+}
+
+.logout_button:hover span {
+    padding-right: 25px;
+    color: white;
+}
+
+.logout_button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.back_button{
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #B9FAF8;
+    border: none;
+    color:black;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 5em;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    height: 2em;
+    margin-bottom: 1em;
+}
+
+.bottom{
+
+    display: flex;
+    justify-content: center;
+}
+.back_button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+
+
+}
+
+.back_button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 1s;
+    color: white;
+}
+
+.back_button:hover{
+    background:linear-gradient( #52489C,#B298DC);
+}
+
+.back_button:hover span {
+    padding-right: 25px;
+    color: white;
+}
+
+.back_button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+  .footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #B298DC;
+    color: white;
+    text-align: center;
+  }
+
+  .form-input
+{
+    border-radius: 10px;
+    color: white;
+    background: linear-gradient(to right, #52489C, #B9FAF8);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin-right: 50px;
+    margin-left: 50px;
+
+}
+
+
+.registration-type{
+    display: flex;
+    justify-content: center;
+    font-family:'Times New Roman', Times, serif;
+    font-size:2.5rem;
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to right, #52489C, #B9FAF8);
+}
+
+.registration-options{
+
+    padding: 20px;
+    background: linear-gradient(to left, #B9FAF8, #B9FAF8);
+
+}
+option{
+    color: #52489C;
+    background: linear-gradient(to left, #52489C, #52489C);
+}
