@@ -63,9 +63,10 @@ Inside your form your layout should look like this
     border-radius: 4px;
 }
 .registration{
-    width: 100%;
+    width: 15em;
+    height: 3em;
     background-color: #B8D0EB;
-    margin-top: 3mm;
+    margin: 1em;
     border-style: hidden;
     border-radius: 4px;
 }
