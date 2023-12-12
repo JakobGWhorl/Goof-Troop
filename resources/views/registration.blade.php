@@ -7,6 +7,7 @@
     <title>New Employee Registration</title>
     {{-- Link to css --}}
     <link rel="stylesheet" href={{ URL::asset('css/app.css') ;}}>
+    <link rel="stylesheet" href={{ URL::asset('css/registration.css') ;}}>
 </head>
 <body>
     <div class="content">
