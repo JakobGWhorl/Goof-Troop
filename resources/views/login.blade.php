@@ -27,7 +27,7 @@
                 </div>
             </div>    
             <input class='submit' type="submit" value="Submit">
-            <a href="{{ url('/registration') }}"><button class = 'registration'>Don't have an account? Register here!</button></a>
+           
             <div class='error'>
                 @isset($error)
                     {{ $error }}
@@ -35,5 +35,15 @@
             </div>
         </div>
     </form>
-</body>
+
+    <div style="display: flex; justify-content:center;margin-top:2em;">
+        
+            <a href="{{ url('/registration') }}"><button class = 'registration'>Don't have an account? Register here!</button></a>
+            <a href="{{ url('/') }}"><button class = 'registration'>Back</button></a>
+        
+    </div>
+    
+   
+
+    </body>
 </html>
