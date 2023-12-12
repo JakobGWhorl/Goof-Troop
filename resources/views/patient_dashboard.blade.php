@@ -9,12 +9,12 @@
     <title>Patient Dashboard</title>
 </head>
 <body>
-    <div class="content">
+    <div>
         <div class="header">
-            <h1>Patient Dashboard</h1>
+            <h1 class="title">Patient Dashboard</h1>
         </div>
 
-        <div class="button-group">
+        <div class="row">
             <a href="{{url('/patient/home')}}"> <button class="button" ><span>Home</span></button></a>
             <a href="{{url('/roster_view')}}"><button class="button" ><span>Roster</span></button></a>
         </div>

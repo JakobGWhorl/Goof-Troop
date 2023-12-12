@@ -9,12 +9,12 @@
     <title>Doctor Dashboard</title>
 </head>
 <body>
-    <div class="content">
+    <div>
         <div class="header">
-            <h1>Doctor Dashboard</h1>
+            <h1 class="title">Doctor Dashboard</h1>
         </div>
 
-        <div class="button-group">
+        <div class="row">
           <div> <a href="{{url('/patients')}}"> <button class="button" ><span>Patients</span></button></a></div>
           <div> <a href="{{url('/doctor_home')}}"><button class="button" ><span>Home</span></button></a></div>
           <div><a href="{{url('/prescriptions')}}"><button class="button" ><span>Prescriptions</span></button></a></div>
@@ -25,7 +25,7 @@
 <footer class="footer">
     <form action={{ url('/Logout') }} method="POST" class="bottom">
         @csrf
-        <input type="submit" value="Logout" class="app_button">
+        <input type="submit" value="Logout" class="logout_button">
       </form>
 
 

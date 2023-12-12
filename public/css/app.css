@@ -78,9 +78,9 @@ Inside your form your layout should look like this
     padding-left: 4em;
     
 }
-form>div>.title{
+.title{
     text-align: center;
-    border-bottom: 3px #B298DC;
+    border-bottom: 4px #B298DC;
    border-bottom-style:inset;
    
 }
@@ -129,7 +129,7 @@ form>div>.title{
 html{
     height: 100%;
 }
-.background{
+.background_setup{
     animation:slide 6s ease-in-out infinite alternate;
     background-image: linear-gradient(-60deg,#FF0035 50%,#B298DC 50%);
   bottom:0;
