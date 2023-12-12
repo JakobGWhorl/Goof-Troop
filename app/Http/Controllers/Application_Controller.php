@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\Employee;
+use App\Models\Appointment;
 
 class Application_Controller extends Controller
 {
@@ -91,14 +93,39 @@ class Application_Controller extends Controller
                 
             }
             session(['dashboard'=>$dashboard]);
+            //  return session()->all();
             return redirect(session('dashboard'));
-            // return $r->session()->all();
+            
         }
         else
             return view('login',['error'=>'Incorrect Password!']);
     
     }
+
     function Logout(){
-        return ("Your banned from new york");
+        session()->flush();
+        return redirect('/');
+    }
+
+    
+    function Registration_Approval(){
+
+        //check if logged in
+        if(session('id')==null)
+            return redirect('login');
+        //check access
+        if(session('access')!=5 && session('access')!=4){
+            return redirect(session('dashboard'));
+        }
+        
+
+        $employees = DB::table('employees')->select()->where('approved','=',false)->get();
+        return view('approve_registration', ['employees' => $employees]);
+    }
+
+    function approved_employee(Request $r){
+        $id = $r->id;
+        $employee = DB::table('employees')->where('employee_id','=',$id)->update(['approved'=>true]);
+        return redirect('/registration_approval/');
     }
 }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Appointment_Controller;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
@@ -11,6 +12,7 @@ use App\Http\Controllers\Employee_Controller;
 use App\Http\Controllers\Registration_Employee_Controller;
 use App\Http\Controllers\Role_Controller;
 use App\Http\Controllers\Roster_Controller;
+use App\Http\Controllers\Patient_Controller;
 
 
 /*
@@ -26,15 +28,6 @@ use App\Http\Controllers\Roster_Controller;
 
 Route::get('/', function () {
     return view('Landing_page');
-});
-
-//Roles
-Route::get('/roles', function () {
-    return view('Roles');
-});
-
-Route::get('/create/roles', function(){
-    return view('Roles');
 });
 
 
@@ -61,39 +54,177 @@ Route::post('/login', [Application_Controller::class, 'process_login']);
 
 Route::post('/Logout', [Application_Controller::class, 'Logout']);
 
+//roster routes
+
 Route::get('/create/roster', function(){
+    //check if logged in
+    if(session('id')==null)
+        return redirect('login');
+    //check access
+    if(session('access')!=4 && session('access')!=5){
+        return redirect(session('dashboard'));
+    }
     return view('Roster');
+});
+Route::get('/roster_view',function(){
+    //check if logged in
+    if(session('id')==null)
+        return redirect('login');
+    //check access
+    if(session('access')!=1 && session('access')!=2){
+        return redirect(session('dashboard'));
+    }
+    return view('Roster_View');
 });
 
 // Patient Routes
-Route::get('/patient',function(){return view('Patient_Dashboard');});
+Route::get('/patient',function(){
+    //check if logged in
+    if(session('id')==null)
+        return redirect('login');
+    //check access
+    if(session('access')!=1){
+        return redirect(session('dashboard'));
+    }
+    return view('Patient_Dashboard');
+});
+Route::get('/patient/home',function(){
+    //check if logged in
+    if(session('id')==null)
+        return redirect('login');
+    //check access
+    if(session('access')!=1){
+        return redirect(session('dashboard'));
+    }
+    return view('patient_home');
+});
+
+//Doctor routes
+Route::get('/doctor',function(){
+    //check if logged in
+    if(session('id')==null)
+        return redirect('login');
+    //check access
+    if(session('access')!=3){
+        return redirect(session('dashboard'));
+    }
+    return view('Doctor_Dashboard');
+});
+Route::get('/patient_of_doctor',function(){
+    //check if logged in
+    if(session('id')==null)
+        return redirect('login');
+    //check access
+    if(session('access')!=3){
+        return redirect(session('dashboard'));
+    }
+    return view('patient_of_doctor');
+});
+Route::get('/prescriptions',function(){
+    //check if logged in
+    if(session('id')==null)
+        return redirect('login');
+    //check access
+    if(session('access')!=3){
+        return redirect(session('dashboard'));
+    }
+    return view('prescriptions');
+});
+// Route::get('/doctor_home', [Appointment_Controller::class,'DoctorsHomeTable']);
 
 //caregiver routes
-Route::get('/caregiver',function(){return view('Caregiver_Dashboard');});
-Route::get('/caregiver_home',function(){return view('Caregiver_Home');});
+Route::get('/caregiver',function(){
+    //check if logged in
+    if(session('id')==null)
+        return redirect('login');
+    //check access
+    if(session('access')!=2){
+        return redirect(session('dashboard'));
+    }
+    return view('Caregiver_Dashboard');
+});
+Route::get('/caregiver_home',function(){
+    //check if logged in
+    if(session('id')==null)
+        return redirect('login');
+    //check access
+    if(session('access')!=2){
+        return redirect(session('dashboard'));
+    }
+    return view('Caregiver_Home');
+});
 
 //supervisor routes
-Route::get('/supervisor',function(){return view('Supervisor_Dashboard');});
+Route::get('/supervisor',function(){
+    //check if logged in
+    if(session('id')==null)
+    return redirect('login');
+    //check access
+    if(session('access')!=4){
+        return redirect(session('dashboard'));
+    }
+    return view('Supervisor_Dashboard');
+});
+Route::get('/doctors_appointment',function(){
+    //check if logged in
+    if(session('id')==null)
+    return redirect('login');
+    //check access
+    if(session('access')!=4 && session('access')!=5){
+        return redirect(session('dashboard'));
+    }
+    return view('Doctors_Appointments');
+});
+Route::get('/registration_approval', [Application_Controller::class,'registration_approval']);
 
-Route::get('/roster_view',function(){return view('Roster_View');});
+Route::get('/admins_report',function(){
+    //check if logged in
+    if(session('id')==null)
+        return redirect('login');
+    //check access
+    if(session('access')!=4 && session('access')!=5){
+        return redirect(session('dashboard'));
+    }
+    return view('Admin_Report');
+});
 
-Route::get('/admins_report',function(){return view('Admin_Report');});
 
-Route::get('/employees',function(){return view('Employees');});
 //admin routes
-Route::get('/admin',function(){return view('Admin_Dashboard');});
-Route::get('/registration_approval',function(){return view('Approve_Registration');});
-Route::get('/doctors_appointment',function(){return view('Doctors_Appointments');});
-Route::get('/payment_view',function(){return view('payments_view');});
-Route::get('/reports',function(){return view('admin_reports');});
-Route::get('/doctor',function(){return view('Doctor');});
-Route::get('/doctor_home',function(){return view('Doctor_home');});
-Route::get('/prescriptions',function(){return view('prescriptions');});
-Route::get('/patient_of_doctor',function(){return view('patient_of_doctor');});
-Route::get('/patients',function(){return view('patients');});
-Route::get('/reports',function(){return view('Admin_Report');});
+Route::get('/admin',function(){
+    //check if logged in
+    if(session('id')==null)
+        return redirect('login');
+    //check access
+    if(session('access')!=5){
+        return redirect(session('dashboard'));
+    }
+    return view('Admin_Dashboard');
+});
 
-Route::get('/patient_home',function(){return view('patient_home');});
+Route::post('/approved_employee', [Application_Controller::class,'approved_employee']);
 
-//doctor routes
-Route::get('/doctor_dashboard',function(){return view('doctor_dashboard');});
+Route::get('/payment_view',function(){
+    //check if logged in
+    if(session('id')==null)
+        return redirect('login');
+    //check access
+    if(\session('access')!=5){
+        return redirect(session('dashboard'));
+    }
+    return view('payments_view');
+});
+
+Route::get('/create/roles', function(){
+    //check if logged in
+    if(session('id')==null)
+        return redirect('login');
+    //check access
+    if(\session('access')!=5){
+        return redirect(session('dashboard'));
+    }
+    return view('Roles');
+});
+
+Route::post('/patientSearch', [Patient_Controller::class, 'getPatientName'])->name('patientSearch');
+
+

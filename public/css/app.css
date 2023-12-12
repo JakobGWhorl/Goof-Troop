@@ -3,12 +3,38 @@ Effects the entire page
 RN only changes background color
 */
 body {
-    background-color: #B298DC;
+    background: #B298DC;
 }
 /*Gets applied to your form tag  */
 .form {    
     display: flex;
-    justify-content: center;    
+    justify-content: center;
+}
+.center{
+    margin-top: 16em;
+}
+.middle{
+    justify-content: center;
+    border-style: none;
+    height: 140mm;
+    margin-top: 30mm;
+}
+.roles{
+    width: 100%;
+}
+tr{
+    border-style:solid ;
+}
+th{
+    background-color: #B9FAF8;
+    border-style:solid ;
+    height: 20mm;
+    font-size: 30px;
+}
+td{
+    background-color: white;
+    border-style: solid;
+    height: 10mm;
 }
 /* 
 Inside your form your layout should look like this
@@ -25,35 +51,64 @@ Inside your form your layout should look like this
     </form>
 
 */
-.form>div>h1, .submit {
+.form>div>{
     text-align: center;
-    width: 100%;
-    margin:auto;
+    width: 85%;
 }
 .submit{
+    width: 100%;
     background-color: #B8D0EB;
-    margin-top: 1em;
+    margin-top: 4mm;
+    border-style: hidden;
+    border-radius: 4px;
+}
+.registration{
+    width: 15em;
+    height: 3em;
+    background-color: #B8D0EB;
+    margin: 1em;
+    border-style: hidden;
+    border-radius: 4px;
 }
 .form>div {
     color: black;
-    border-radius: 5%;
-    max-width: 90%;
+    border-radius: 3.5%;
     background-color: #B9FAF8;
-    padding: 1em;
-    margin: 1em;
+    padding-bottom: 9mm;
+    padding-right: 4em;
+    padding-left: 4em;
+    
+}
+form>div>.title{
+    text-align: center;
+    border-bottom: 3px #B298DC;
+   border-bottom-style:inset;
+   
+}
+
+.format{
+    padding: 4mm;
 }
 .form-input {
-    display:flex;
-    justify-content: left;
+    justify-content: center;
+    display:-webkit-flex;
     margin: .5em;
+    padding-top: 4mm;
 }
 .form-input>label{
-    width: 8em;
+    width: 4em;
+    font-size: 5mm;
     text-align: right;
-    margin-right: 1em;
+    padding-right: 1em;
 }
 .form-input>input, .form-input>select{
-    width: 11em;
+    width: 40mm;
+    height: 5mm;
+}
+.checkbox{
+    margin-right: -10mm;
+    margin-left: -15mm;
+    
 }
 .error {    
     text-align: center;
@@ -65,4 +120,44 @@ Inside your form your layout should look like this
     background-color: #B9FAF8;  
 }
 
+.app_button{
+     background-color: #B8D0EB;
+     width: 25mm;
+     margin-top: 4mm;
+     border-style: none;
+     border-radius: 10px;
+}
+html{
+    height: 100%;
+}
+.background{
+    animation:slide 6s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg,#FF0035 50%,#B298DC 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+.animation{
+    animation-direction: alternate-reverse;
+    animation-duration: 8s;
+}
+.animation2{
+    animation-duration: 10s;
+}
 
+@keyframes slide {
+    0% {
+      transform:translateX(-25%);
+    }
+    100% {
+      transform:translateX(25%);
+    }
+  }.datatable{
+    background-color: white;
+    padding: 1em;
+    margin: 1em;
+}

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Patient;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 
 class Patient_Controller extends Controller
 {
@@ -13,7 +14,14 @@ class Patient_Controller extends Controller
      */
     public function index()
     {
-        //
+        //check if logged in
+        if(session('id')==null)
+            return redirect('login');
+        //check access
+        if(session('access')!=5 && session('access')!=4 && session('access')!=2){
+            return redirect(session('dashboard'));
+        }
+        return view('patients');
     }
 
     /**
@@ -80,5 +88,15 @@ class Patient_Controller extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+    public function getPatientName(Request $request)
+    {
+        $patient_id = $request->patientID;
+
+        $patient = DB::select('select * from patients where patient_id = ?', [$patient_id]);
+
+        return view('patient_home', ['data'=>$patient[0]]);
+        
     }
 }
