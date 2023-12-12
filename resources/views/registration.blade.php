@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>New Employee Registration</title>
     {{-- Link to css --}}
-    <link rel="stylesheet" href={{ URL::asset('css/app.css') }}>    
+    <link rel="stylesheet" href={{ URL::asset('css/app.css') }}>
 </head>
 <body>
 
@@ -16,7 +16,7 @@
             <label for="registration-type">Choose Registration Type:</label>
             <select name="registration-type" id="registration-type">
                 <option value="patient">Patient</option>
-                <option value="employee">Employee</option>                    
+                <option value="employee">Employee</option>
             </select>
         </div>
         <div class='error'>
@@ -47,10 +47,10 @@
             <label for="role">Role: </label>
             <select required name="role" id="">
                 @foreach ($roles as $role)
-                    <option value="{{ $role['role'] }}">{{ $role['role'] }}</option>                
+                    <option value="{{ $role['role'] }}">{{ $role['role'] }}</option>
                 @endforeach
-                
-                
+
+
             </select>
         </div>
         <div class="form-input">
@@ -70,7 +70,7 @@
             <input required type="date" name="dob">
         </div>
         <input class='submit' type="submit">
-        
+
     </div>
 </form>
 
@@ -85,7 +85,7 @@
         <div class='form-input'>
             <label for="last_name">Last Name:</label>
             <input required type="text" name="last_name">
-        </div>  
+        </div>
         <div class='form-input'>
             <label for="email">Email:</label>
             <input required placeholder="email@provider.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" type="email" name="email">
@@ -117,10 +117,10 @@
         <input type="hidden" name="family_code" value="{{ $family_code }}">
         <input type="hidden" name="role" value="Patient">
         <input type="hidden" name="admission_date" value="{{ date("Y-m-d H:i:s") }}">
-        
+
         <input class='submit' type="submit">
     </div>
- 
+
 
 </form>
 </body>
