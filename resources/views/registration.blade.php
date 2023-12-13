@@ -10,12 +10,14 @@
     <link rel="stylesheet" href={{ URL::asset('css/registration.css') }}>
 </head>
 <body>
+
     <div class="background_setup"></div>
     <div class="background_setup animation"></div>
     <div class="background_setup animation2"></div>   
 <div class="content">
 <form class='form'>
     <div>
+
 
         <div class='form-input'>
             <div class="registration-type">
@@ -24,6 +26,9 @@
             <select name="registration-type" id="registration-type">
                 <option value="patient">Patient</option>
                 <option value="employee">Employee</option></select></div>
+
+        </div>
+
         </div>
         <div class='error'>
             <div>
@@ -34,8 +39,9 @@
         </div>
 
 
-</form>
 
+</form>
+<div class="content">
 <form id = "employeesregistration" action={{ url('/api/employees') }} method="POST" class="form">
     @csrf
     <div>
@@ -54,7 +60,10 @@
             <select required name="role" id="">
                 @foreach ($roles as $role)
                     <option value="{{ $role['role'] }}">{{ $role['role'] }}</option>
+
                 @endforeach
+
+
 
 
             </select>
@@ -75,9 +84,11 @@
             <label for="">Date of Birth: </label>
             <input required type="date" name="dob">
 
+
         </div>
 
         <div class="button-group"><a href=""> <button class="button"><span>Submit</span></button></a></div>
+
     </div>
 </form>
 
@@ -117,11 +128,11 @@
         </div>
         <div class='form-input'>
             <label for="emergency_contact_relationship">Emergency Contact Relationship:</label>
-            <input required type="text" name="emergency_contact_relationship">
+            <input required type="text" name="emergency_contact_relationship" style="height: 1.5em">
         </div>
         <div class='form-input'>
             <label for="family_code" style="height: 2em;margin-top: .5em;">Family Code:</label>
-            <input type="text" name="family_code" id="family_code" disabled value="{{ $family_code }}" style="height: 2.5em">
+            <input type="text" name="family_code" id="family_code" disabled value="{{ $family_code }}" style="height: 4.5em ">
         </div>
         <input type="hidden" name="family_code" value="{{ $family_code }}">
         <input type="hidden" name="role" value="Patient">
@@ -143,5 +154,6 @@
 </html>
 {{-- Link to JS --}}
 <script src={{ URL::asset('js/registration.js') }}></script>
+
 
 

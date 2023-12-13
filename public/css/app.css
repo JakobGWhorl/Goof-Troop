@@ -77,8 +77,13 @@ Inside your form your layout should look like this
     padding-right: 4em;
     padding-left: 4em;
 
+    margin-bottom: 20px;}
+form>div>.title{
+
+
 }
 .title{
+
     text-align: center;
     border-bottom: 4px #B298DC;
    border-bottom-style:inset;

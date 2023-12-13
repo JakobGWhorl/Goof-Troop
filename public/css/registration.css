@@ -10,12 +10,14 @@
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     background: linear-gradient(to right, #52489C, #B9FAF8);
+
 }
 
 .button-group{
     display: flex;
     padding-right: 20px;
     justify-content: center;
+    margin-top: 10px;
 }
 
 .row2{
@@ -202,8 +204,9 @@
     color: white;
     background: linear-gradient(to right, #52489C, #B9FAF8);
     font-family:Georgia, 'Times New Roman', Times, serif;
-    margin-right: 50px;
-    margin-left: 50px;
+    margin-right: 10px;
+    margin-left: 23px;
+    padding-bottom: 10px;
 
 }
 
@@ -216,14 +219,11 @@
     margin-left: 20px;
     color: white;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(to right, #52489C, #B9FAF8);
+
 }
 
 .registration-options{
-
-    padding: 20px;
-    background: linear-gradient(to left, #B9FAF8, #B9FAF8);
+    padding: 15px;
 
 }
 option{
