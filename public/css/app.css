@@ -6,7 +6,7 @@ body {
     background: #B298DC;
 }
 /*Gets applied to your form tag  */
-.form {    
+.form {
     display: flex;
     justify-content: center;
 }
@@ -36,7 +36,7 @@ td{
     border-style: solid;
     height: 10mm;
 }
-/* 
+/*
 Inside your form your layout should look like this
 
     <form class="form">
@@ -74,16 +74,15 @@ Inside your form your layout should look like this
     color: black;
     border-radius: 3.5%;
     background-color: #B9FAF8;
-    padding-bottom: 9mm;
+    
     padding-right: 4em;
     padding-left: 4em;
-    
-}
+    margin-bottom: 20px;}
 form>div>.title{
     text-align: center;
     border-bottom: 3px #B298DC;
    border-bottom-style:inset;
-   
+
 }
 
 .format{
@@ -108,16 +107,16 @@ form>div>.title{
 .checkbox{
     margin-right: -10mm;
     margin-left: -15mm;
-    
+
 }
-.error {    
+.error {
     text-align: center;
     color: #FF0035;
     font-weight: bold;
     width:15em;
     margin:auto;
-    margin-top: 1em;  
-    background-color: #B9FAF8;  
+    margin-top: 1em;
+    background-color: #B9FAF8;
 }
 
 .app_button{
