@@ -13,9 +13,9 @@
         <div class="header">
             <h1 class="title">Caregiver Dashboard</h1>
         </div>
-
         <div class="row">
             <a href="{{ url('/api/patients') }}"> <button class="button" ><span>Patients</span></button></a>
+
             <a href="{{url('/caregiver_home')}}"><button class="button" ><span>Home</span></button></a>
             <a href="{{url('/roster_view')}}"><button class="button" ><span>Roster</span></button></a>
         </div>

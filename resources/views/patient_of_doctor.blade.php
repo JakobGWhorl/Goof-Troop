@@ -15,11 +15,11 @@
     <body class="bodyHP">
         <div class="enter">
             <div class="header">
-                <h1>"Patient Names" Appointment Details</h1>
+                <h1>Appointment Details</h1>
             </div>
             <div class="button-group">
                 <div> <a href=""> <button class="button" style="vertical-align:middle"><span>Old Prescription</span></button></a></div>
-                <div> <a href="{{url('/patients')}}"><button class="button" style="vertical-align:middle"><span>Back to Patients</span></button></a></div>
+                <div> <a href="{{url('/patient')}}"><button class="button" style="vertical-align:middle"><span>Dashbaord</span></button></a></div>
                 <div><a href="{{url('/prescriptions')}}"><button class="button" style="vertical-align:middle"><span>Patients Perscriptions</span></button></a></div>
               </div>
 
@@ -29,19 +29,35 @@
 <table id="PatientsAppointmentsTable" class="display">
     <thead>
         <tr>
-            <th>Column 1</th>
-            <th>Column 2</th>
+            <th>Patient ID</th>
+            <th>first Name</th>
+            <th>Last Name</th>   
+            <th>email</th> 
+            <th>phone</th> 
+            <th>password</th> 
+            <th>dob</th> 
+            <th>faily code</th>         
+            <th>emergency contact</th> 
+            <th>Relationship</th> 
+            <th>role</th> 
         </tr>
     </thead>
     <tbody>
+        @foreach ($patients as $patient)
         <tr>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
+            <td>{{ $patient->patient_id }}</td>
+            <td>{{ $patient->first_name }}</td>
+            <td>{{ $patient->last_name }}</td>
+            <td>{{ $patient->email }}</td>
+            <td>{{ $patient->phone_number }}</td>
+            <td>{{ $patient->password }}</td>
+            <td>{{ $patient->dob }}</td>
+            <td>{{ $patient->family_code }}</td>
+            <td>{{ $patient->emergency_contact }}</td>
+            <td>{{ $patient->emergency_contact_relationship }}</td>
+            <td>{{ $patient->role }}</td>
         </tr>
-        <tr>
-            <td>Row 2 Data 1</td>
-            <td>Row 2 Data 2</td>
-        </tr>
+        @endforeach
     </tbody>
 </table>
 <footer class="footer">
@@ -55,7 +71,14 @@
     </div>
 </footer>
 </html>
+<footer class="footer">
+    <form action={{ url('/Logout') }} method="POST" class="bottom">
+        @csrf
+        <input type="submit" value="Logout" class="app_button">
+      </form>
 
+
+  </footer>
 
 <script>
     let table = new DataTable('#PatientsAppointmentsTable', {
@@ -64,8 +87,4 @@
 </script>
 
 
-<script>
-    let table = new DataTable('#PatientsAppointmentsTable', {
 
-});
-</script>

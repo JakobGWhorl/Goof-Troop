@@ -16,15 +16,14 @@
 <div class="content">
 <form class='form'>
     <div>
+
         <div class='form-input'>
             <div class="registration-type">
             <label for="registration-type">Choose Registration Type:</label></div>
             <div class="registration-options">
             <select name="registration-type" id="registration-type">
                 <option value="patient">Patient</option>
-                <option value="employee">Employee</option>
-            </select>
-        </div>
+                <option value="employee">Employee</option></select></div>
         </div>
         <div class='error'>
             <div>
@@ -33,7 +32,7 @@
             @endisset
             </div>
         </div>
-    </div>
+
 
 </form>
 
@@ -135,10 +134,14 @@
 
 </div>
 </div>
+
+</div>
+
 </form>
 </body>
 
 </html>
 {{-- Link to JS --}}
 <script src={{ URL::asset('js/registration.js') }}></script>
+
 

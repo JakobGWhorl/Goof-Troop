@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Patient;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Employee;
@@ -144,3 +145,4 @@ class Application_Controller extends Controller
     }
 // checks if the patient_id and family code are correct and returns the schedule
 }
+
