@@ -8,25 +8,17 @@
     {{-- Link to css --}}
     <link rel="stylesheet" href={{ URL::asset('css/app.css') ;}}>
     <link rel="stylesheet" href={{ URL::asset('css/registration.css') ;}}>
-    <link rel="stylesheet" href={{ URL::asset('css/app.css') ;}}>
-    <link rel="stylesheet" href={{ URL::asset('css/registration.css') ;}}>
 </head>
 <body>
-<form class='form'>
-    <div>
+
+
         <div class='form-input'>
-            <div class="registration-type">
-            <label for="registration-type">Choose Registration Type:</label></div>
-            <div class="registration-options">
             <div class="registration-type">
             <label for="registration-type">Choose Registration Type:</label></div>
             <div class="registration-options">
             <select name="registration-type" id="registration-type">
                 <option value="patient">Patient</option>
-                <option value="employee">Employee</option>
-                <option value="employee">Employee</option>
-            </select>
-        </div>
+                <option value="employee">Employee</option></select></div>
         </div>
         </div>
         <div class='error'>
@@ -36,14 +28,13 @@
             @endisset
             </div>
         </div>
-    </div>
+
 
 </form>
 <div class="content">
 <form id = "employeesregistration" action={{ url('/api/employees') }} method="POST" class="form">
     @csrf
     <div>
-        <div class="header"><h1>New Employee <br>Registration</h1></div>
         <div class="header"><h1>New Employee <br>Registration</h1></div>
 
         <div class="form-input">
@@ -59,7 +50,7 @@
             <select required name="role" id="">
                 @foreach ($roles as $role)
                     <option value="{{ $role['role'] }}">{{ $role['role'] }}</option>
-                    <option value="{{ $role['role'] }}">{{ $role['role'] }}</option>
+
                 @endforeach
 
 
@@ -88,16 +79,12 @@
 
         <div class="button-group"><a href=""> <button class="button"><span>Submit</span></button></a></div>
 
-        <div class="button-group"><a href=""> <button class="button"><span>Submit</span></button></a></div>
     </div>
 </form>
 
 <form id ="patientsregistration" action={{ url('/api/patients') }} method="POST" class='form'>
     @csrf
     <div>
-    <div class="title">
-        <div class="header"><h1>New Patient <br>Registration</h1></div>
-    </div>
     <div class="title">
         <div class="header"><h1>New Patient <br>Registration</h1></div>
     </div>
@@ -108,7 +95,6 @@
         <div class='form-input'>
             <label for="last_name">Last Name:</label>
             <input required type="text" name="last_name">
-        </div>
         </div>
         <div class='form-input'>
             <label for="email">Email:</label>
@@ -145,17 +131,13 @@
         <div class="button-group"><a href=""> <button class="button"><span>Submit</span></button></a></div>
          </div>
 
-
-        <div class="button-group"><a href=""> <button class="button"><span>Submit</span></button></a></div>
-         </div>
-
     </div>
 
 </div>
 </div>
 
 </div>
-</div>
+
 </form>
 </body>
 
@@ -163,5 +145,4 @@
 {{-- Link to JS --}}
 <script src={{ URL::asset('js/registration.js'); }}></script>
 
-<script src={{ URL::asset('js/registration.js'); }}></script>
 
