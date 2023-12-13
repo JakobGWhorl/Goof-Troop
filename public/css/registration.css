@@ -9,7 +9,7 @@
     margin: 1em;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(to right, #52489C, #B9FAF8);
+    background: linear-gradient(to right, #52489C, #FF0035);
 
 }
 
@@ -202,7 +202,7 @@
 {
     border-radius: 10px;
     color: white;
-    background: linear-gradient(to right, #52489C, #B9FAF8);
+    background: linear-gradient(to right, #52489C, #FF0035);
     font-family:Georgia, 'Times New Roman', Times, serif;
     margin-right: 10px;
     margin-left: 23px;
@@ -210,6 +210,9 @@
 
 }
 
+.color{
+    background: linear-gradient(to right, #52489C,#B9FAF8);  
+}
 
 .registration-type{
     display: flex;

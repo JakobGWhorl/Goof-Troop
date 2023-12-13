@@ -14,34 +14,34 @@
     <div class="background_setup"></div>
     <div class="background_setup animation"></div>
     <div class="background_setup animation2"></div>   
-<div class="content">
-<form class='form'>
+<div>
+<form>
     <div>
 
 
-        <div class='form-input'>
+        <div class='form-input color'>
             <div class="registration-type">
             <label for="registration-type">Choose Registration Type:</label></div>
             <div class="registration-options">
             <select name="registration-type" id="registration-type">
                 <option value="patient">Patient</option>
                 <option value="employee">Employee</option></select></div>
-
-        </div>
-
-        </div>
-        <div class='error'>
-            <div>
-            @isset($error)
-                {{ $error }}
-            @endisset
+            <div class='error'>
+                    <div>
+                        @isset($error)
+                            {{ $error }}
+                        @endisset
+                    </div>
             </div>
         </div>
+
+        </div>
+        
 
 
 
 </form>
-<div class="content">
+<div>
 <form id = "employeesregistration" action={{ url('/api/employees') }} method="POST" class="form">
     @csrf
     <div>
