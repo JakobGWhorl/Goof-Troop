@@ -20,8 +20,8 @@
             <a href="http://127.0.0.1:8000/payment_view"><button class="button"><span>View Payments</span></button></a>
         </div>
         <div class='button-group row2'>
-            <a href="http://127.0.0.1:8000/reports"><button class="button"><span>Reports</span></button></a>
-            <a href="http://127.0.0.1:8000/roles"><button class="button"><span>Roles</span></button></a>
+            <a href="http://127.0.0.1:8000/admins_report"><button class="button"><span>Reports</span></button></a>
+            <a href="http://127.0.0.1:8000/create/roles"><button class="button"><span>Roles</span></button></a>
         </div>
    </div> 
 </body>

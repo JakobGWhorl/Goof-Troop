@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Patient;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Employee;
@@ -128,4 +129,7 @@ class Application_Controller extends Controller
         $employee = DB::table('employees')->where('employee_id','=',$id)->update(['approved'=>true]);
         return redirect('/registration_approval/');
     }
+
+  
+
 }
