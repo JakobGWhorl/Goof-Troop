@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\Appointment_Controller;
+use App\Models\Appointment;
+use App\Models\Roster;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
@@ -13,6 +15,7 @@ use App\Http\Controllers\Registration_Employee_Controller;
 use App\Http\Controllers\Role_Controller;
 use App\Http\Controllers\Roster_Controller;
 use App\Http\Controllers\Patient_Controller;
+use App\Models\Patient;
 
 
 /*
@@ -74,7 +77,8 @@ Route::get('/roster_view',function(){
     if(session('access')!=1 && session('access')!=2){
         return redirect(session('dashboard'));
     }
-    return view('Roster_View');
+    $rosters = Roster::all();
+    return view('roster_view', ['rosters' => $rosters]);
 });
 
 // Patient Routes
@@ -118,7 +122,9 @@ Route::get('/patient_of_doctor',function(){
     if(session('access')!=3){
         return redirect(session('dashboard'));
     }
-    return view('patient_of_doctor');
+    $patients = Patient::all();
+
+    return view('patient_of_doctor', ['patients' => $patients]);
 });
 Route::get('/prescriptions',function(){
     //check if logged in
@@ -228,3 +234,25 @@ Route::get('/create/roles', function(){
 Route::post('/patientSearch', [Patient_Controller::class, 'getPatientName'])->name('patientSearch');
 
 
+    Route::get('/doctor/home', function(){
+        //check if logged in
+        if(session('id')==null)
+            return redirect('login');
+        //check access
+        if(session('access')!=4 && session('access')!=5 && session('access')!=3){
+            return redirect(session('dashboard'));
+        }
+        $appointments = Appointment::all();
+        return view('Doctor_home', ['appointments' => $appointments]);
+    });
+    Route::get('/caregiver/patient', function(){
+        //check if logged in
+        if(session('id')==null)
+            return redirect('login');
+        //check access
+        if(session('access')!=4 && session('access')!=5 && session('access')!=3  && session('access')!=2  && session('access')!=1){
+            return redirect(session('dashboard'));
+        }
+        $patients = Patient::all();
+        return view('patients', ['patients' => $patients]);
+    });

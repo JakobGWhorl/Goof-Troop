@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Patient;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Employee;
@@ -128,4 +129,20 @@ class Application_Controller extends Controller
         $employee = DB::table('employees')->where('employee_id','=',$id)->update(['approved'=>true]);
         return redirect('/registration_approval/');
     }
+
+//Family member access functions
+//check if family code is right
+    function family_member(Request $r){
+        $family_code = $r ->all('family_code');
+
+        $member = DB::table('patients')->where('family_code','==',$family_code)->get();
+        
+    }
+//check if patient_id exists
+    function patientid_check(Request $r){
+        $patient_id = $r->all('patients');
+        $patient = DB::table('patients')->where('patient_id','=',$patient_id)->get();
+    }
+// checks if the patient_id and family code are correct and returns the schedule
 }
+

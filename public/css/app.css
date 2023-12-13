@@ -23,17 +23,17 @@ body {
     width: 100%;
 }
 tr{
-    border-style:solid ;
+    border-bottom-style:solid ;
 }
 th{
     background-color: #B9FAF8;
-    border-style:solid ;
+    border-bottom-style:solid ;
     height: 20mm;
     font-size: 30px;
 }
 td{
     background-color: white;
-    border-style: solid;
+    border-bottom-style: solid;
     height: 10mm;
 }
 /*
@@ -76,10 +76,16 @@ Inside your form your layout should look like this
     background-color: #B9FAF8;
     padding-right: 4em;
     padding-left: 4em;
+
     margin-bottom: 20px;}
 form>div>.title{
+
+
+}
+.title{
+
     text-align: center;
-    border-bottom: 3px #B298DC;
+    border-bottom: 4px #B298DC;
    border-bottom-style:inset;
 
 }
@@ -128,7 +134,7 @@ form>div>.title{
 html{
     height: 100%;
 }
-.background{
+.background_setup{
     animation:slide 6s ease-in-out infinite alternate;
     background-image: linear-gradient(-60deg,#FF0035 50%,#B298DC 50%);
   bottom:0;

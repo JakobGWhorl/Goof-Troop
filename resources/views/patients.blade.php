@@ -5,81 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href={{ URL::asset('css/app.css') }}>
-    <link rel="stylesheet" href={{ URL::asset('css/dashboard.css') }}>
-    <link rel="stylesheet" href={{ URL::asset('css/patient_list.css') }}>
+    <link rel="stylesheet" href={{ URL::asset('css/patient_of_doctor.css') }}>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css" />
     <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
-
-    <title>Patients</title>
-
+    <link rel="stylesheet" href={{ URL::asset('css/dashboard.css'); }}>
+    <title>Your Patients</title>
 <body>
+    <body class="bodyHP">
+        <div class="enter">
+            <div class="header">
+                <h1>Your Patients </h1>
+            </div>
+            <div class="button-group">
+                <div> <a href="{{url('/patient')}}"><button class="button" style="vertical-align:middle"><span>Dashbaord</span></button></a></div>
+              </div>
 
 
 
-<div class="content">
-<form class="form">
-    <div class="enter">
-        <div class="header">
-            <h1>Patient List</h1>
-        </div>
-<h4>
-    <div class='form-input'>
-        <label for="">
-            Search Patient ID</label>
-        <input type="number" name="id" id="">
-    </div>
-    <div class='form-input'>
-        <label for="">
-            Search Patient Name</label>
-        <input type="text" name="name" id="">
-    </div>
-    <div class='form-input'>
-        <label for="">
-            Search Patient Age</label>
-        <input type="number" name="age" id="">
-    </div>
-    <div class='form-input'>
-        <label for="">
-            Search Patient Emergency Contact Number</label>
-        <input type="tel" name="number" id="">
-    </div>
-    <div class='form-input'>
-        <label for="">
-            Search Patient Emergency Contact Name</label>
-        <input type="text" name="emergencyname" id="">
-    </div>
-    <div class='form-input'>
-        <label for="">
-            Search Patient Admission Date</label>
-        <input type="date" name="admissiondate" id="">
-    </div>
-    <div class='button-group'>
-        <a href="http://127.0.0.1:8000/patient_of_doctor"> <button class="button" style="vertical-align:middle"><span>Submit</span></button></a>
-    </div>
-    <div class='button-group'>
-        <a href="http://127.0.0.1:8000/doctor_dashboard"> <button class="button" style="vertical-align:middle"><span>Return to Dashboard</span></button></a>
-    </div>
+</body>
+<table id="PatientsAppointmentsTable" class="display">
+    <thead>
+        <tr>
+            <th>Patient ID</th>
+            <th>first Name</th>
+            <th>Last Name</th>   
+            <th>email</th> 
+            <th>phone</th> 
+            <th>password</th> 
+            <th>dob</th> 
+            <th>faily code</th>         
+            <th>emergency contact</th> 
+            <th>Relationship</th> 
+            <th>role</th> 
+        </tr>
+    </thead>
+    <tbody>
+        @foreach ($patients as $patient)
+        <tr>
+            <td>{{ $patient->patient_id }}</td>
+            <td>{{ $patient->first_name }}</td>
+            <td>{{ $patient->last_name }}</td>
+            <td>{{ $patient->email }}</td>
+            <td>{{ $patient->phone_number }}</td>
+            <td>{{ $patient->password }}</td>
+            <td>{{ $patient->dob }}</td>
+            <td>{{ $patient->family_code }}</td>
+            <td>{{ $patient->emergency_contact }}</td>
+            <td>{{ $patient->emergency_contact_relationship }}</td>
+            <td>{{ $patient->role }}</td>
+        </tr>
+        @endforeach
+    </tbody>
+</table>
 
-  </h4>
-  <form>
-</div>
+</html>
 <footer class="footer">
+
     <div class="bottom">
         <form action={{ url('/Logout') }} method="POST" >
             @csrf
             <input type="submit" value="Logout" class="logout_button">
-
-          </form>
+            
+        </form>
           <a href={{ session('dashboard') }}> <button class="back_button" style="vertical-align:middle"><span>Back</span></button></a>
-        </div>
+    </div>
+
   </footer>
-</html>
+
 <script>
-    let table = new DataTable('#PatientsTable', {
+    let table = new DataTable('#PatientsAppointmentsTable', {
 
 });
 </script>
 
-});
-</script>
