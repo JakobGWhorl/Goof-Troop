@@ -18,7 +18,6 @@
             <a href="{{url('/patient/home')}}"> <button class="button" ><span>Home</span></button></a>
             <a href="{{url('/roster_view')}}"><button class="button" ><span>Roster</span></button></a>
         </div>
-       
     </div>
 </body>
 <footer class="footer">

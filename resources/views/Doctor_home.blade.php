@@ -51,8 +51,8 @@
 
 
     <div class="button-group">
-        <a href="{{url('/patients')}}"> <button class="button" style="vertical-align:middle"><span>Patient List</span></button></a>
-        <a href="http://127.0.0.1:8000/doctor_dashboard"> <button class="button" style="vertical-align:middle"><span>Return to Dashboard</span></button></a>
+        <a href="{{url('/patient_of_doctor')}}"> <button class="button" style="vertical-align:middle"><span>Patient List</span></button></a>
+      
     </div>
 
 </body>
