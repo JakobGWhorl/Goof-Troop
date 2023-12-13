@@ -6,11 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>New Employee Registration</title>
     {{-- Link to css --}}
-    <link rel="stylesheet" href={{ URL::asset('css/app.css') ;}}>
-    <link rel="stylesheet" href={{ URL::asset('css/registration.css') ;}}>
+    <link rel="stylesheet" href={{ URL::asset('css/app.css') }}>
+    <link rel="stylesheet" href={{ URL::asset('css/registration.css') }}>
 </head>
 <body>
-
+    <div class="background_setup"></div>
+    <div class="background_setup animation"></div>
+    <div class="background_setup animation2"></div>   
+<div class="content">
+<form class='form'>
+    <div>
 
         <div class='form-input'>
             <div class="registration-type">
@@ -137,6 +142,6 @@
 
 </html>
 {{-- Link to JS --}}
-<script src={{ URL::asset('js/registration.js'); }}></script>
+<script src={{ URL::asset('js/registration.js') }}></script>
 
 

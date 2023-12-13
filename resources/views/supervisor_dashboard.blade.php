@@ -9,19 +9,19 @@
     <title>Supervisor Dashboard</title>
 </head>
 <body>
-  <div class="content">
+  <div>
     <div class="header">
-        <h1>Supervisor Dashboard</h1>
+        <h1 class="title">Supervisor Dashboard</h1>
     </div>
 
-    <div class="button-group">
+    <div class="row">
       <div> <a href=""> <button class="button"><span>Patient<br> Information</span></button></a></div>
       <div> <a href="{{url('/doctors_appointment')}}"><button class="button"><span>Appointments</span></button></a></div>
       <div><a href="{{url('/api/employees')}}"><button class="button"><span>Employees</span></button></a></div>
       <div> <a href="{{ url('/api/patients') }}"> <button class="button"><span>Patients</span></button></a></div>
     </div>
 
-    <div class="button-group row2">
+    <div class="row2">
       <div> <a href="{{url('/registration_approval')}}"><button class="button" style="vertical-align:middle"><span>Registration Approval</span></button></a></div>
       <div> <a href="{{url('/create/roster')}}"><button class="button" style="vertical-align:middle"><span>Roster</span></button></a></div>
       <div> <a href="{{url('/reports')}}"> <button class="button" style="vertical-align:middle"><span>Admin Report</span></button></a></div>

@@ -9,13 +9,13 @@
     <title>CareGiver Dashboard</title>
 </head>
 <body>
-    <div class="content">
+    <div>
         <div class="header">
-            <h1>Caregiver Dashboard</h1>
+            <h1 class="title">Caregiver Dashboard</h1>
         </div>
+        <div class="row">
+            <a href="{{ url('/api/patients') }}"> <button class="button" ><span>Patients</span></button></a>
 
-        <div class="button-group">
-            <a href="{{ url('/caregiver/patient') }}"> <button class="button" ><span>Patients</span></button></a>
             <a href="{{url('/caregiver_home')}}"><button class="button" ><span>Home</span></button></a>
             <a href="{{url('/roster_view')}}"><button class="button" ><span>Roster</span></button></a>
         </div>
@@ -25,7 +25,7 @@
 <footer class="footer">
     <form action={{ url('/Logout') }} method="POST" class="bottom">
         @csrf
-        <input type="submit" value="Logout" class="app_button">
+        <input type="submit" value="Logout" class="logout_button">
       </form>
        
       
