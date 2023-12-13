@@ -9,7 +9,9 @@
     <link rel="stylesheet" href={{ URL::asset('css/app.css') }}>    
 </head>
 <body>
-
+    <div class="background_setup"></div>
+    <div class="background_setup animation"></div>
+    <div class="background_setup animation2"></div>
 <form class='form'>
     <div>
         <div class='form-input'>
